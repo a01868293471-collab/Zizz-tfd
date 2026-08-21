@@ -3183,29 +3183,651 @@ function toggleSignupPassword() {
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
-<nav class="premium-header" style="background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%); padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; border-radius: 0px; box-shadow: 0 8px 25px rgba(255, 69, 0, 0.15); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); border-bottom: 2px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; font-family: 'Poppins', sans-serif;">
+<!-- ================= PREMIUM AYPOTH HEADER ================= -->
 
-    <div class="notification-container" style="position: relative; display: flex; align-items: center; width: 42px; height: 42px; flex-shrink: 0;">
-        <button type="button" onclick="openCustomNotification(event)" style="border: none; outline: none; padding: 0; margin: 0; cursor: pointer; text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.3); transition: 0.3s; box-shadow: inset 0 0 10px rgba(255,255,255,0.1);" title="Notifications">
-            <i class="fas fa-bell" style="color: white; font-size: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); pointer-events: none;"></i>
-<span id="custom-noti-dot" style="position: absolute; top: -2px; right: -2px; width: 16px; height: 16px; background: #ff3b30; border-radius: 50%; border: 1px solid #ffffff; color: white; font-size: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center; line-height: 1; pointer-events: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">1</span>
+<nav class="aypoth-premium-header">
+
+    <!-- LEFT : NOTIFICATION -->
+    <div class="aypoth-header-side">
+
+        <button
+            type="button"
+            class="aypoth-header-btn notification-btn"
+            onclick="openCustomNotification(event)"
+            title="Notifications"
+        >
+
+            <i class="fas fa-bell"></i>
+
+            <span id="custom-noti-dot" class="notification-badge">
+                1
+            </span>
+
         </button>
+
     </div>
 
-    <div class="brand-container" style="text-align: center; display: flex; align-items: center; justify-content: center; flex: 1; padding: 0 10px; box-sizing: border-box; gap: 10px;">
-        <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
-             alt="Logo" 
-             style="height: 38px; width: auto; max-width: 150px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25)); transition: transform 0.3s ease; border-radius: 5px;">
-        
-        <span style="color: white; font-size: 22px; font-weight: 700; text-transform: capitalize; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-            Aypoth
-        </span>
+
+    <!-- CENTER : BRAND -->
+    <div class="aypoth-brand">
+
+        <div class="brand-logo-wrap">
+
+            <img
+                src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg"
+                alt="Aypoth"
+                class="brand-logo"
+            >
+
+        </div>
+
+        <div class="brand-text">
+
+            <span class="brand-name">
+                Aypoth
+            </span>
+
+            <span class="brand-tagline">
+                Premium Digital Platform
+            </span>
+
+        </div>
+
     </div>
 
-    <div class="header-icon-wrapper" onclick="toggleSidebar()" style="width: 42px; height: 42px; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; border-radius: 10px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.3); transition: 0.3s; box-shadow: inset 0 0 10px rgba(255,255,255,0.1); flex-shrink: 0; box-sizing: border-box;">
-        <i class="fas fa-bars" style="color: white; font-size: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));"></i>
+
+    <!-- RIGHT : MENU -->
+    <div class="aypoth-header-side">
+
+        <button
+            type="button"
+            class="aypoth-header-btn menu-btn"
+            onclick="toggleSidebar()"
+            title="Menu"
+        >
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
     </div>
+
 </nav>
+
+
+<style>
+
+/* =====================================================
+   AYPOTH PREMIUM HEADER
+===================================================== */
+
+.aypoth-premium-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    width:100%;
+
+    height:66px;
+
+    padding:
+        8px 12px;
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    font-family:
+        'Poppins',
+        'Hind Siliguri',
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% -80px,
+            rgba(255,220,80,.35),
+            transparent 42%
+        ),
+
+        linear-gradient(
+            135deg,
+            #a80000 0%,
+            #e00000 38%,
+            #f45100 72%,
+            #ff9d00 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.25);
+
+    box-shadow:
+
+        0 8px 28px
+        rgba(130,0,0,.20);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+}
+
+
+/* =====================================================
+   HEADER SIDE
+===================================================== */
+
+.aypoth-header-side{
+
+    width:43px;
+
+    height:43px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/* =====================================================
+   HEADER BUTTON
+===================================================== */
+
+.aypoth-header-btn{
+
+    position:relative;
+
+    width:42px;
+
+    height:42px;
+
+    padding:0;
+
+    border:none;
+
+    outline:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.23),
+            rgba(255,255,255,.09)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.28);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.20),
+
+        0 5px 15px
+        rgba(90,0,0,.13);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.aypoth-header-btn i{
+
+    color:#fff;
+
+    font-size:16px;
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.20)
+        );
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+/* Hover */
+
+.aypoth-header-btn:hover{
+
+    background:
+        rgba(255,255,255,.28);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.25),
+
+        0 8px 20px
+        rgba(90,0,0,.18);
+
+}
+
+
+.aypoth-header-btn:hover i{
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* Press */
+
+.aypoth-header-btn:active{
+
+    transform:
+        scale(.91);
+
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.notification-btn i{
+
+    animation:
+        bellFloat 3s
+        infinite ease-in-out;
+
+}
+
+
+/* Notification Badge */
+
+.notification-badge{
+
+    position:absolute;
+
+    top:-4px;
+
+    right:-4px;
+
+    min-width:17px;
+
+    height:17px;
+
+    padding:
+        0 4px;
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1744,
+            #ff4d00
+        );
+
+    color:#fff;
+
+    border:
+        2px solid
+        rgba(255,255,255,.95);
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:8px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    box-shadow:
+
+        0 3px 8px
+        rgba(120,0,0,.28);
+
+    animation:
+        notificationPulse 2s
+        infinite;
+
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.aypoth-brand{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    max-width:
+        calc(100% - 115px);
+
+    white-space:nowrap;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.brand-logo-wrap{
+
+    width:39px;
+
+    height:39px;
+
+    padding:2px;
+
+    box-sizing:border-box;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #ffe55c
+        );
+
+    box-shadow:
+
+        0 5px 14px
+        rgba(80,0,0,.20),
+
+        0 0 0 1px
+        rgba(255,255,255,.30);
+
+}
+
+
+.brand-logo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   BRAND TEXT
+===================================================== */
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:1;
+
+}
+
+
+.brand-name{
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    letter-spacing:
+        .8px;
+
+    text-shadow:
+
+        0 2px 7px
+        rgba(0,0,0,.25);
+
+}
+
+
+.brand-tagline{
+
+    margin-top:4px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size:6px;
+
+    font-weight:700;
+
+    letter-spacing:
+        .65px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =====================================================
+   MENU BUTTON
+===================================================== */
+
+.menu-btn i{
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes bellFloat{
+
+    0%,
+    90%,
+    100%{
+        transform:
+            rotate(0deg);
+    }
+
+    93%{
+        transform:
+            rotate(8deg);
+    }
+
+    96%{
+        transform:
+            rotate(-8deg);
+    }
+
+}
+
+
+@keyframes notificationPulse{
+
+    0%,
+    100%{
+
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 3px 8px
+            rgba(120,0,0,.28);
+
+    }
+
+    50%{
+
+        transform:
+            scale(1.12);
+
+        box-shadow:
+
+            0 0 0 4px
+            rgba(255,255,255,.10),
+
+            0 3px 10px
+            rgba(120,0,0,.30);
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+    .aypoth-premium-header{
+
+        height:62px;
+
+        padding:
+            7px 9px;
+
+    }
+
+    .aypoth-header-side{
+
+        width:40px;
+
+    }
+
+    .aypoth-header-btn{
+
+        width:39px;
+
+        height:39px;
+
+        border-radius:12px;
+
+    }
+
+    .brand-logo-wrap{
+
+        width:36px;
+
+        height:36px;
+
+        border-radius:11px;
+
+    }
+
+    .brand-logo{
+
+        border-radius:9px;
+
+    }
+
+    .brand-name{
+
+        font-size:16px;
+
+    }
+
+    .brand-tagline{
+
+        font-size:5.5px;
+
+    }
+
+    .aypoth-brand{
+
+        gap:6px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .notification-btn i,
+    .notification-badge{
+
+        animation:none !important;
+
+    }
+
+}
+
+</style>
 <div id="custom-noti-popup-overlay" onclick="closeCustomNotification(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 99998; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;">
     
     <div id="custom-noti-popup" class="aypoth-popup-box" onclick="event.stopPropagation()" style="position: relative; width: 100%; max-width: 450px; background: white; color: #333; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); padding: 25px; z-index: 99999; border: 1px solid rgba(0,0,0,0.05); box-sizing: border-box; animation: popupScale 0.3s ease; font-family: 'Poppins', sans-serif;">
@@ -3551,165 +4173,1442 @@ function togglePassword() {
     }
 }
 </script>
-<div style="background-color: #ffffff; padding: 10px 15px; margin: 5px 15px; border-radius: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; justify-items: center; align-items: center;">
-        
-        <!-- ফেসবুক -->
-        <div onclick="window.open('https://www.facebook.com/share/1BJDPbbkGv/')" style="cursor: pointer; text-align: center; width: 100%;">
-            <div style="width: 45px; height: 45px; margin: 0 auto; border-radius: 4px; background: linear-gradient(135deg, #FF0000, #FFD700); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);">
-                <i class="fab fa-facebook-f" style="color: #ffffff; font-size: 19px;"></i>
-            </div>
-            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">ফেসবুক</p>
-        </div>
 
-        <!-- ইউটিউব -->
-        <div onclick="window.open('https://www.youtube.com/@Aypoth')" style="cursor: pointer; text-align: center; width: 100%;">
-            <div style="width: 45px; height: 45px; margin: 0 auto; border-radius: 4px; background: linear-gradient(135deg, #FF0000, #FFD700); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);">
-                <i class="fab fa-youtube" style="color: #ffffff; font-size: 19px;"></i>
-            </div>
-            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">ইউটিউব</p>
-        </div>
+    <!-- ================= PREMIUM SOCIAL HUB ================= -->
+<div class="premium-social-hub">
 
-        <!-- টেলিগ্রাম -->
-        <div onclick="window.open('https://t.me/Aypoth_Official')" style="cursor: pointer; text-align: center; width: 100%;">
-            <div style="width: 45px; height: 45px; margin: 0 auto; border-radius: 4px; background: linear-gradient(135deg, #FF0000, #FFD700); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);">
-                <i class="fab fa-telegram-plane" style="color: #ffffff; font-size: 19px;"></i>
-            </div>
-            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">টেলিগ্রাম</p>
-        </div>
-
-        <!-- ইনকাম রিভিউ -->
-        <div onclick="window.open('https://www.facebook.com/share/g/18oEPDeJkQ/')" style="cursor: pointer; text-align: center; width: 100%;">
-            <div style="width: 45px; height: 45px; margin: 0 auto; border-radius: 4px; background: linear-gradient(135deg, #FF0000, #FFD700); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);">
-                <span style="color: #ffffff; font-size: 22px; font-weight: bold;">৳</span>
-            </div>
-            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">ইনকাম রিভিউ</p>
-        </div>
-
-    </div>
-</div>
-
-<div id="activation-card" style="display: block; margin: 15px 12px;">
-    <div class="premium-pulse-card" style="background: linear-gradient(135deg, #ff0000 0%, #ff4d00 50%, #ff8c00 100%); padding: 15px 18px; border-radius: 22px; color: white; box-shadow: 0 12px 30px rgba(255, 61, 0, 0.4); position: relative; overflow: hidden; border: 1.5px solid rgba(255, 255, 255, 0.4); display: flex; align-items: center; justify-content: space-between; animation: cardAttract 3s infinite ease-in-out;">
-        
-        <!-- ব্যাকগ্রাউন্ড গ্লো ইফেক্টস -->
-        <div style="position: absolute; top: -30px; right: -20px; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.25); border-radius: 50%; filter: blur(35px);"></div>
-        <div style="position: absolute; bottom: -25px; left: -10px; width: 80px; height: 80px; background: rgba(0, 0, 0, 0.15); border-radius: 50%; filter: blur(25px);"></div>
-
-        <!-- কন্টেন্ট পার্ট -->
-        <div style="display: flex; align-items: center; gap: 14px; z-index: 2;">
-            <!-- ফি বক্স -->
-            <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); width: 50px; height: 50px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(255, 255, 255, 0.5); box-shadow: inset 0 0 10px rgba(255,255,255,0.2);">
-                <span style="font-size: 9px; font-weight: 800; color: #ffe600; text-transform: uppercase; letter-spacing: 0.5px;">Fee</span>
-                <span style="font-weight: 900; color: #ffffff; font-size: 15px; line-height: 1;">৳100</span>
-            </div>
+    <div class="social-hub-title">
+        <div>
+            <span>STAY CONNECTED</span>
             
-            <!-- টেক্সট সমূহ -->
-            <div>
-                <h6 style="margin: 0; font-weight: 850; font-size: 15px; color: #ffffff; display: flex; align-items: center; gap: 6px; font-family: 'Poppins', sans-serif; text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.2);">
-                    Premium Access <i class="fas fa-crown" style="color: #ffe600; font-size: 13px; animation: crownGlow 1.5s infinite alternate;"></i>
-                </h6>
-                <p style="margin: 3px 0 0; font-size: 10px; color: rgba(255,255,255,0.95); font-weight: 600; letter-spacing: 0.2px;">
-                    Lifetime Activation & VIP Tasks
-                </p>
+        </div>
+
+        <div class="social-live">
+            <i></i> LIVE
+        </div>
+    </div>
+
+
+    <div class="premium-social-grid">
+
+        <!-- Facebook -->
+        <div
+            class="premium-social-item"
+            onclick="window.open('https://www.facebook.com/share/1BJDPbbkGv/','_blank')">
+
+            <div class="social-card">
+
+                <div class="social-badge"></div>
+
+                <div class="social-icon facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+
+                <strong>ফেসবুক</strong>
+                <small>Follow Us</small>
+
             </div>
         </div>
 
-        <!-- অ্যানিমেটেড বাটন -->
-        <button onclick="activateAccountNow()" class="activate-btn" 
-                style="background: #ffffff; color: #ff0000; border: none; padding: 10px 18px; border-radius: 14px; font-weight: 900; font-size: 11px; cursor: pointer; box-shadow: 0 6px 20px rgba(255, 77, 0, 0.4); text-transform: uppercase; letter-spacing: 1px; z-index: 2; border: 2px solid #ffe600; animation: btnGlow 1.5s infinite alternate;">
-             ACTIVATE
-        </button>
+
+        <!-- YouTube -->
+        <div
+            class="premium-social-item"
+            onclick="window.open('https://www.youtube.com/@Aypoth','_blank')">
+
+            <div class="social-card">
+
+                <div class="social-badge"></div>
+
+                <div class="social-icon youtube-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+
+                <strong>ইউটিউব</strong>
+                <small>Watch Videos</small>
+
+            </div>
+        </div>
+
+
+        <!-- Telegram -->
+        <div
+            class="premium-social-item"
+            onclick="window.open('https://t.me/Aypoth_Official','_blank')">
+
+            <div class="social-card">
+
+                <div class="social-badge"></div>
+
+                <div class="social-icon telegram-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
+
+                <strong>টেলিগ্রাম</strong>
+                <small>Join Channel</small>
+
+            </div>
+        </div>
+
+
+        <!-- Income Review -->
+        <div
+            class="premium-social-item"
+            onclick="window.open('https://www.facebook.com/share/g/18oEPDeJkQ/','_blank')">
+
+            <div class="social-card review-card">
+
+                <div class="social-badge"></div>
+
+                <div class="social-icon review-icon">
+                    <span>৳</span>
+                </div>
+
+                <strong>ইনকাম রিভিউ</strong>
+                <small>Member Reviews</small>
+
+            </div>
+        </div>
+
     </div>
+
 </div>
 
-<!-- অ্যানিমেশন যোগ করার জন্য CSS স্টাইল শিট -->
+
 <style>
-    /* পুরো কার্ডটি কিছুক্ষণ পর পর হালকা কাঁপবে এবং বড়-ছোট হয়ে চমকাবে */
-    @keyframes cardAttract {
-        0%, 100% { transform: scale(1); box-shadow: 0 12px 30px rgba(255, 61, 0, 0.4); }
-        45% { transform: scale(1.02) translateY(-2px); box-shadow: 0 18px 35px rgba(255, 61, 0, 0.6); }
-        50% { transform: scale(1.02) rotate(1deg); }
-        52% { transform: scale(1.02) rotate(-1deg); }
-        54% { transform: scale(1.02) rotate(1deg); }
-        56% { transform: scale(1.02) rotate(0deg); }
-        58% { transform: scale(1.02) translateY(-2px); }
+
+/* ==========================================
+   PREMIUM SOCIAL HUB
+========================================== */
+
+.premium-social-hub{
+    width:calc(100% - 30px);
+    margin:12px 15px;
+    padding:17px 12px 14px;
+    box-sizing:border-box;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(255,60,0,.06),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(255,190,0,.07),
+            transparent 38%
+        ),
+        #fff;
+
+    border:1px solid #eeeeee;
+    border-radius:18px;
+
+    box-shadow:
+        0 9px 30px rgba(0,0,0,.055);
+
+    font-family:
+        'Hind Siliguri',
+        'Poppins',
+        sans-serif;
+}
+
+
+/* Header */
+
+.social-hub-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin:0 3px 14px;
+}
+
+.social-hub-title span{
+    display:block;
+
+    font-family:'Poppins',sans-serif;
+    font-size:7px;
+    font-weight:800;
+    letter-spacing:1.4px;
+
+    color:#e54800;
+}
+
+.social-hub-title h3{
+    margin:2px 0 0;
+
+    color:#161616;
+    font-size:15px;
+    line-height:1.2;
+    font-weight:850;
+}
+
+
+/* Live */
+
+.social-live{
+    display:flex;
+    align-items:center;
+    gap:5px;
+
+    padding:5px 8px;
+
+    border-radius:20px;
+
+    background:#fff5ee;
+    color:#e44800;
+
+    font-family:'Poppins',sans-serif;
+    font-size:7px;
+    font-weight:800;
+}
+
+.social-live i{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+
+    background:#ff3b00;
+
+    box-shadow:
+        0 0 0 4px rgba(255,60,0,.08);
+
+    animation:socialLivePulse 1.7s infinite;
+}
+
+@keyframes socialLivePulse{
+
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
     }
 
-    /* বাটনের চারপাশের নিয়ন লাইটিং গ্লো ইফেক্ট */
-    @keyframes btnGlow {
-        0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 230, 0, 0.5), 0 6px 20px rgba(255, 77, 0, 0.3); }
-        100% { transform: scale(1.05); box-shadow: 0 0 15px #ffe600, 0 6px 25px rgba(255, 77, 0, 0.5); }
+    50%{
+        opacity:.45;
+        transform:scale(.7);
     }
 
-    /* ক্রাউন বা মুকুটের গ্লো অ্যানিমেশন */
-    @keyframes crownGlow {
-        0% { filter: drop-shadow(0 0 2px rgba(255, 230, 0, 0.4)); transform: scale(1); }
-        100% { filter: drop-shadow(0 0 10px #ffe600); transform: scale(1.2) rotate(5deg); }
+}
+
+
+/* Grid */
+
+.premium-social-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:7px;
+}
+
+
+/* Item */
+
+.premium-social-item{
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+
+    transition:
+        transform .18s ease;
+}
+
+.premium-social-item:active{
+    transform:scale(.92);
+}
+
+
+/* Card */
+
+.social-card{
+    position:relative;
+
+    min-height:104px;
+
+    padding:11px 3px 8px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafafa
+        );
+
+    border:1px solid #ededed;
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 4px 13px rgba(0,0,0,.045);
+
+    transition:
+        .2s ease;
+}
+
+
+/* Decorative top line */
+
+.social-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:22%;
+    width:56%;
+    height:2px;
+
+    border-radius:0 0 5px 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e60000,
+            #ff7200,
+            #ffc400
+        );
+}
+
+
+/* Corner glow */
+
+.social-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:42px;
+    height:42px;
+
+    right:-23px;
+    top:-23px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,80,0,.055);
+}
+
+
+/* Badge */
+
+.social-badge{
+    position:absolute;
+
+    top:6px;
+    left:6px;
+
+    padding:2px 4px;
+
+    border-radius:5px;
+
+    background:#f6f6f6;
+
+    color:#aaa;
+
+    font-family:'Poppins',sans-serif;
+    font-size:4.8px;
+    font-weight:800;
+
+    letter-spacing:.3px;
+}
+
+
+/* Icon */
+
+.social-icon{
+    width:47px;
+    height:47px;
+
+    border-radius:15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:7px;
+
+    position:relative;
+    z-index:2;
+
+    color:#fff;
+
+    box-shadow:
+        0 8px 17px rgba(0,0,0,.13);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* Icon Shine */
+
+.social-icon::after{
+    content:"";
+
+    position:absolute;
+
+    top:4px;
+    left:7px;
+
+    width:55%;
+    height:28%;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.25);
+}
+
+
+/* Facebook */
+
+.facebook-icon{
+    background:
+        linear-gradient(
+            145deg,
+            #1877f2,
+            #0756c9
+        );
+
+    box-shadow:
+        0 8px 18px rgba(24,119,242,.24);
+}
+
+
+/* YouTube */
+
+.youtube-icon{
+    background:
+        linear-gradient(
+            145deg,
+            #ff0000,
+            #c90000
+        );
+
+    box-shadow:
+        0 8px 18px rgba(255,0,0,.23);
+}
+
+
+/* Telegram */
+
+.telegram-icon{
+    background:
+        linear-gradient(
+            145deg,
+            #2aaef2,
+            #087fca
+        );
+
+    box-shadow:
+        0 8px 18px rgba(20,150,220,.24);
+}
+
+
+/* Review */
+
+.review-icon{
+    background:
+        linear-gradient(
+            145deg,
+            #e60000,
+            #ff8a00,
+            #ffc400
+        );
+
+    box-shadow:
+        0 8px 18px rgba(230,60,0,.24);
+}
+
+
+/* Font Awesome Icons */
+
+.social-icon i{
+    position:relative;
+    z-index:2;
+
+    font-size:21px;
+
+    color:#fff;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.18);
+}
+
+
+/* Money */
+
+.review-icon span{
+    position:relative;
+    z-index:2;
+
+    color:#fff;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:22px;
+    font-weight:900;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.18);
+}
+
+
+/* Text */
+
+.social-card strong{
+    width:100%;
+
+    padding:0 2px;
+
+    box-sizing:border-box;
+
+    color:#171717;
+
+    font-size:9px;
+    font-weight:850;
+
+    line-height:1.25;
+}
+
+.social-card small{
+    margin-top:3px;
+
+    color:#999;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:5.7px;
+    font-weight:600;
+
+    line-height:1;
+}
+
+
+/* Touch */
+
+.premium-social-item:active .social-icon{
+    transform:
+        translateY(2px)
+        scale(.94);
+
+    box-shadow:
+        0 4px 9px rgba(0,0,0,.12);
+}
+
+
+/* Small phones */
+
+@media(max-width:350px){
+
+    .premium-social-hub{
+        width:calc(100% - 20px);
+        margin-left:10px;
+        margin-right:10px;
+
+        padding-left:8px;
+        padding-right:8px;
     }
 
-    /* বাটনে হাত দিলে ক্লিক ইফেক্ট */
-    .activate-btn:active {
-        transform: scale(0.95) !important;
+    .premium-social-grid{
+        gap:5px;
     }
+
+    .social-card{
+        min-height:98px;
+        border-radius:13px;
+    }
+
+    .social-icon{
+        width:43px;
+        height:43px;
+        border-radius:13px;
+    }
+
+    .social-icon i{
+        font-size:19px;
+    }
+
+    .review-icon span{
+        font-size:20px;
+    }
+
+    .social-card strong{
+        font-size:8.5px;
+    }
+
+}
+
+
+/* Tablet */
+
+@media(min-width:600px){
+
+    .premium-social-grid{
+        gap:12px;
+    }
+
+    .social-card{
+        min-height:120px;
+    }
+
+    .social-icon{
+        width:54px;
+        height:54px;
+    }
+
+    .social-icon i{
+        font-size:24px;
+    }
+
+    .review-icon span{
+        font-size:25px;
+    }
+
+    .social-card strong{
+        font-size:11px;
+    }
+
+}
+
 </style>
-
-<style>
-    /* বাটনের জন্য হালকা পালস এনিমেশন */
-    @keyframes pulse {
-        0% { transform: scale(1); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); }
-        50% { transform: scale(1.05); box-shadow: 0 6px 25px rgba(255, 230, 0, 0.4); }
-        100% { transform: scale(1); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); }
-    }
     
-    .activate-btn:active {
-        transform: scale(0.95);
-    }
-</style>
+<!-- ================= PREMIUM ACTIVATION CARD ================= -->
+
+<div id="activation-card">
+
+    <div class="activation-premium-card">
+
+        <!-- Background Decorative Glow -->
+        <div class="activation-orb orb-one"></div>
+        <div class="activation-orb orb-two"></div>
+
+        <!-- Shine -->
+        <div class="activation-shine"></div>
+
+
+        <!-- LEFT CONTENT -->
+        <div class="activation-content">
+
+            <!-- Fee -->
+            <div class="activation-fee">
+
+                <span class="fee-label">
+                    ACCESS
+                </span>
+
+                <strong>
+                    ৳100
+                </strong>
+
+                <small>
+                    ONE TIME
+                </small>
+
+            </div>
+
+
+            <!-- Text -->
+            <div class="activation-info">
+
+                <div class="activation-title">
+
+                    <span>
+                        Premium Access
+                    </span>
+
+                    <i class="fas fa-crown"></i>
+
+                </div>
+
+                <p>
+                    Lifetime Activation
+                    <span>•</span>
+                    VIP Tasks
+                </p>
+
+                <div class="activation-status">
+
+                    <i class="fas fa-shield-alt"></i>
+
+                    <span>
+                        Secure Access
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVATE BUTTON -->
+        <button
+            class="activate-premium-btn"
+            onclick="activateAccountNow()"
+        >
+
+            <span>
+                ACTIVATE
+            </span>
+
+            <i class="fas fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
 
 <style>
-    /* বাটনে চাপ দিলে রিয়েল অ্যাপের মতো ইফেক্ট */
-    .activate-btn:active {
-        transform: scale(0.95);
-        background: #ffe600;
-        color: #000;
+
+/* =========================================
+   PREMIUM ACTIVATION
+========================================= */
+
+#activation-card{
+    display:block;
+    margin:13px 12px;
+
+    font-family:
+        'Poppins',
+        'Hind Siliguri',
+        sans-serif;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.activation-premium-card{
+
+    position:relative;
+
+    min-height:86px;
+
+    padding:13px 12px;
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:9px;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    border-radius:20px;
+
+    border:1px solid
+        rgba(255,255,255,.42);
+
+    background:
+
+        radial-gradient(
+            circle at 92% 10%,
+            rgba(255,255,255,.20),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 5% 100%,
+            rgba(255,220,0,.18),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #a90000 0%,
+            #e50000 35%,
+            #ff4d00 68%,
+            #ff9d00 100%
+        );
+
+    box-shadow:
+
+        0 12px 30px
+        rgba(230,50,0,.28),
+
+        inset 0 1px 0
+        rgba(255,255,255,.30);
+
+    animation:
+        activationFloat 4s
+        infinite ease-in-out;
+
+}
+
+
+/* =========================================
+   DECORATIVE ORBS
+========================================= */
+
+.activation-orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    filter:blur(2px);
+
+}
+
+
+/* Top Right */
+
+.orb-one{
+
+    width:115px;
+    height:115px;
+
+    right:-60px;
+    top:-72px;
+
+    background:
+        rgba(255,255,255,.17);
+
+    box-shadow:
+        0 0 45px
+        rgba(255,255,255,.10);
+
+}
+
+
+/* Bottom Left */
+
+.orb-two{
+
+    width:80px;
+    height:80px;
+
+    left:-38px;
+    bottom:-48px;
+
+    background:
+        rgba(0,0,0,.12);
+
+}
+
+
+/* =========================================
+   SHINE
+========================================= */
+
+.activation-shine{
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:45%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.30),
+            transparent
+        );
+
+    transform:
+        skewX(-22deg);
+
+    animation:
+        activationShine 5s
+        infinite;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.activation-content{
+
+    position:relative;
+    z-index:3;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-width:0;
+
+}
+
+
+/* =========================================
+   FEE BOX
+========================================= */
+
+.activation-fee{
+
+    width:53px;
+    height:59px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-sizing:border-box;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,.38);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+
+        inset 0 1px 5px
+        rgba(255,255,255,.15),
+
+        0 6px 15px
+        rgba(0,0,0,.10);
+
+}
+
+
+.fee-label{
+
+    color:#ffe95c;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:6px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+}
+
+
+.activation-fee strong{
+
+    margin-top:1px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    line-height:1;
+
+    font-weight:900;
+
+}
+
+
+.activation-fee small{
+
+    margin-top:4px;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:5px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.activation-info{
+
+    min-width:0;
+
+}
+
+
+.activation-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.activation-title span{
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+
+    font-weight:850;
+
+    line-height:1.2;
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 2px 7px
+        rgba(0,0,0,.18);
+
+}
+
+
+.activation-title i{
+
+    color:#ffe600;
+
+    font-size:11px;
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(255,230,0,.7)
+        );
+
+    animation:
+        crownPulse 1.8s
+        infinite ease-in-out;
+
+}
+
+
+.activation-info p{
+
+    margin:4px 0 5px;
+
+    color:
+        rgba(255,255,255,.88);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    line-height:1.2;
+
+    white-space:nowrap;
+
+}
+
+
+.activation-info p span{
+
+    color:#ffe600;
+
+    padding:0 2px;
+
+}
+
+
+/* =========================================
+   SECURE STATUS
+========================================= */
+
+.activation-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    padding:3px 6px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.11);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+}
+
+
+.activation-status i{
+
+    color:#7dffae;
+
+    font-size:6px;
+
+}
+
+
+.activation-status span{
+
+    color:
+        rgba(255,255,255,.80);
+
+    font-size:5.5px;
+
+    font-weight:700;
+
+    letter-spacing:.2px;
+
+}
+
+
+/* =========================================
+   ACTIVATE BUTTON
+========================================= */
+
+.activate-premium-btn{
+
+    position:relative;
+
+    z-index:4;
+
+    flex-shrink:0;
+
+    min-width:82px;
+
+    height:40px;
+
+    padding:0 9px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    border:none;
+
+    border-radius:13px;
+
+    background:#fff;
+
+    color:#e40000;
+
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:9px;
+
+    font-weight:950;
+
+    letter-spacing:.8px;
+
+    box-shadow:
+
+        0 7px 18px
+        rgba(0,0,0,.18),
+
+        0 0 0
+        rgba(255,230,0,0);
+
+    transition:
+
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+
+}
+
+
+.activate-premium-btn i{
+
+    font-size:8px;
+
+    transition:
+        transform .18s ease;
+
+}
+
+
+/* Button Glow */
+
+.activate-premium-btn{
+
+    animation:
+        activationButtonGlow
+        2s infinite ease-in-out;
+
+}
+
+
+/* Hover */
+
+.activate-premium-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 10px 22px
+        rgba(0,0,0,.20),
+
+        0 0 15px
+        rgba(255,230,0,.35);
+
+}
+
+
+.activate-premium-btn:hover i{
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* Press */
+
+.activate-premium-btn:active{
+
+    transform:
+        scale(.92);
+
+    background:#ffe600;
+
+    color:#7b1800;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0,0,0,.15);
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes activationFloat{
+
+    0%,
+    100%{
+        transform:
+            translateY(0);
     }
-</style>
 
-<style>
-/* কার্ডের ওপর দিয়ে যে সাদা আভা চলে যাবে (Shine Effect) */
-.card-shine {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
-    transform: skewX(-25deg);
-    animation: shine 4s infinite;
-    z-index: 1;
-}
-
-@keyframes shine {
-    0% { left: -100%; }
-    20% { left: 150%; }
-    100% { left: 150%; }
-}
-
-/* বাটনের হোভার ইফেক্ট */
-.activate-btn:active {
-    transform: scale(0.92);
-}
-</style>
-
-<style>
-    /* বাটনটি ক্লিক করলে ছোট হবে এমন একটা এফেক্ট */
-    #activation-card button:active {
-        transform: scale(0.95);
-        background: #f0f0f0 !important;
+    50%{
+        transform:
+            translateY(-2px);
     }
+
+}
+
+
+@keyframes activationShine{
+
+    0%{
+        left:-120%;
+    }
+
+    18%{
+        left:140%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+
+
+@keyframes crownPulse{
+
+    0%,
+    100%{
+        transform:
+            scale(1)
+            rotate(0deg);
+
+        filter:
+            drop-shadow(
+                0 0 2px
+                rgba(255,230,0,.4)
+            );
+    }
+
+    50%{
+        transform:
+            scale(1.15)
+            rotate(4deg);
+
+        filter:
+            drop-shadow(
+                0 0 8px
+                rgba(255,230,0,.85)
+            );
+    }
+
+}
+
+
+@keyframes activationButtonGlow{
+
+    0%,
+    100%{
+
+        box-shadow:
+            0 7px 18px
+            rgba(0,0,0,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 7px 20px
+            rgba(0,0,0,.18),
+
+            0 0 13px
+            rgba(255,230,0,.45);
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:360px){
+
+    #activation-card{
+
+        margin:
+            11px 9px;
+
+    }
+
+    .activation-premium-card{
+
+        padding:
+            11px 9px;
+
+        gap:6px;
+
+        border-radius:18px;
+
+    }
+
+    .activation-content{
+
+        gap:7px;
+
+    }
+
+    .activation-fee{
+
+        width:48px;
+        height:55px;
+
+        border-radius:13px;
+
+    }
+
+    .activation-fee strong{
+
+        font-size:14px;
+
+    }
+
+    .activation-title span{
+
+        font-size:11px;
+
+    }
+
+    .activation-info p{
+
+        font-size:7px;
+
+    }
+
+    .activate-premium-btn{
+
+        min-width:73px;
+
+        height:37px;
+
+        padding:0 7px;
+
+        font-size:8px;
+
+        gap:4px;
+
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    .activation-premium-card,
+    .activation-shine,
+    .activation-title i,
+    .activate-premium-btn{
+
+        animation:none !important;
+
+    }
+
+}
+
 </style>
 
+
+      
 <div class="container mt-2" style="padding: 0 16px; font-family: 'Poppins', sans-serif;">
     <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin: 10px 0;">
         
@@ -3874,431 +5773,1868 @@ function togglePassword() {
         opacity: 0.8;
     }
 </style>
-<div style="background: #ffffff; margin: 10px 0; padding: 20px 0; border-radius: 0px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); border: 1px solid #f2f2f2; width: 100%; box-sizing: border-box;">
-    
-    <style>
-        .photo-grid-box {
-            width: 56px; 
-            height: 56px;
-            /* লাল এবং হলুদের আকর্ষণীয় মিক্সড গ্রেডিয়েন্ট কালার */
-            background: linear-gradient(135deg, #ff1e00 0%, #ffac00 100%);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 8px;
-            border-radius: 50%; /* বাটনগুলো সম্পূর্ণ গোলাকার করার জন্য */
-            border: 3px solid #ffffff; 
-            box-shadow: 0 4px 10px rgba(255, 30, 0, 0.2);
-            transition: all 0.2s ease;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
+<!-- ================= PREMIUM SERVICE HUB ================= -->
+<div class="premium-service-hub">
 
-        /* SVG আইকনের সাইজ ও কালার কন্ট্রোল */
-        .photo-grid-box svg {
-            width: 26px;
-            height: 26px;
-            fill: currentColor;
-        }
-
-        /* বাটন অ্যাক্টিভ বা প্রেস ইফেক্ট */
-        .photo-grid-item:active .photo-grid-box {
-            border-color: #2ecc71 !important; 
-            box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
-            transform: scale(0.92); 
-        }
-
-        /* বাংলা লেখার স্টাইল */
-        .photo-grid-item span {
-            display: block;
-            font-size: 11px;
-            font-weight: 700;
-            color: #333;
-            line-height: 1.3;
-            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
-            white-space: pre-line; /* বাংলা লাইনের ব্রেক ঠিক রাখার জন্য */
-        }
-    </style>
-    
-    <!-- ১ লাইনে ৪টি করে বাটন বসানোর গ্রিড -->
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 0; text-align: center; width: 100%;">
-        
-
-
-<!-- ২. মাইক্রো জব -->
-<div class="photo-grid-item" onclick="handleMicroJobClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- ল্যাপটপ ও টাস্ক আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6zm10 2h4v2h-4zm0 3h4v2h-4zm-6-3h4v5H8z"/>
-        </svg>
-    </div>
-    <span>মাইক্রো<br>জব</span>
-</div>
-
-<!-- ৩. অ্যাডস ইনকাম -->
-<div class="photo-grid-item" onclick="handleAdsIncomeClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- মেগাফোন/মাইক আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-        </svg>
-    </div>
-    <span>অ্যাড<br>ইনকাম</span>
-</div>
-<!-- ৪. জিমেইল ক্রিয়েট -->
-<div class="photo-grid-item" onclick="handleGmailCreateClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- মেইল বা খাম আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-    </div>
-    <span>জিমেইল<br>ক্রিয়েট</span>
-</div>
-
-<!-- ৫. জব পোস্ট -->
-<div class="photo-grid-item" onclick="handleJobPostClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- ফাইল এবং ম্যাগনিফাইং গ্লাস আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-        </svg>
-    </div>
-    <span>জব<br>পোস্ট</span>
-</div>
-
-<!-- ৬. ডিজিটাল সার্ভিস -->
-<div class="photo-grid-item" onclick="handleDigitalServiceClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- গিয়ার/সেটিংস আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-        </svg>
-    </div>
-    <span>ডিজিটাল<br>সার্ভিস</span>
-</div>
-<!-- ৭. সোশ্যাল সার্ভিস -->
-<div class="photo-grid-item" onclick="handleSocialServiceClick()">
-    <!-- style="border-radius: 0px;" যোগ করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- গ্লোব/পৃথিবী আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-        </svg>
-    </div>
-    <span>সোশ্যাল<br>সার্ভিস</span>
-</div>
-
-<div class="photo-grid-item" onclick="handleWebDevClick()" style="cursor: pointer;">
-    <!-- style="border-radius: 0px;" যুক্ত করা হয়েছে -->
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;">
-            <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 5h16v11H4V5zm13 14H7v-1h10v1z"/>
-        </svg>
-    </div>
-    <span>ওয়েবসাইট<br>ডেভেলপমেন্ট</span>
-</div>
-
-<!-- ৮. টার্গেট বোনাস -->
-<div class="photo-grid-item" onclick="handleTargetBonusClick()">
-    <!-- style="border-radius: 0px;" যুক্ত করা হয়েছে -->
-
-    <div class="photo-grid-box" style="border-radius: 0px;">
-        <!-- টার্গেট বোর্ড আইকন -->
-        <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
-        </svg>
-    </div>
-    <span>টার্গেট<br>বোনাস</span>
-</div>
-        <!-- ৯. লিডারশিপ -->
-        <div class="photo-grid-item" onclick="handleLeaderClick()">
- <div class="photo-grid-box" style="border-radius: 0px;">
-                <!-- টিম/লিডার আইকন -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-                </svg>
-            </div>
-            <span>লিডার<br>শিপ</span>
+    <div class="service-hub-head">
+        <div>
+            <div class="hub-mini-title">EXPLORE SERVICES</div>
+          
         </div>
 
-        <!-- ১০. ইনভেস্টমেন্ট -->
-        <div class="photo-grid-item" onclick="handleInvestClick()">
-              <div class="photo-grid-box" style="border-radius: 0px;">
+        <div class="hub-status">
+            <span></span>
+            Active
+        </div>
+    </div>
 
-                <!-- কয়েন বা টাকার স্তূপ আইকন -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 11.9 13 12.5 13 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
-                </svg>
+
+    <div class="premium-service-grid">
+
+        <!-- 01 Micro Job -->
+        <div class="premium-service-item" onclick="handleMicroJobClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-red">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6zm6 3h4v4h-4V9z"/>
+                    </svg>
+                </div>
+                <strong>মাইক্রো জব</strong>
+                <small>Quick Tasks</small>
             </div>
-            <span>ইনভেস্ট<br>মেন্ট</span>
         </div>
 
-        <!-- ১১. ট্রেনিং সেকশন -->
-        <div class="photo-grid-item" onclick="handleTrainingClick()">
-                        <div class="photo-grid-box" style="border-radius: 0px;">
 
-                <!-- শিক্ষা বা টুপি আইকন -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-                </svg>
+        <!-- 02 Ads -->
+        <div class="premium-service-item" onclick="handleAdsIncomeClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-orange">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 10v4h4l5 4V6l-5 4H3zm13.5 2c0-1.1-.6-2.05-1.5-2.58v5.16c.9-.53 1.5-1.48 1.5-2.58zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4-.91 7-4.49 7-8.77s-3-7.86-7-8.77z"/>
+                    </svg>
+                </div>
+                <strong>অ্যাড ইনকাম</strong>
+                <small>Earn More</small>
             </div>
-            <span>ট্রেনিং<br>সেকশন</span>
         </div>
 
-        <!-- ১২. মোর অপশন -->
-        <div class="photo-grid-item" onclick="handleMoreOptionsClick()">
-                                  <div class="photo-grid-box" style="border-radius: 0px;">
 
-                <!-- ৩টি ডট/মেনু আইকন -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                </svg>
+       
+
+
+        <!-- 04 Job -->
+        <div class="premium-service-item" onclick="handleJobPostClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-red">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm1 7V3.5L18.5 9H15zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/>
+                    </svg>
+                </div>
+                <strong>জব পোস্ট</strong>
+                <small>Find Jobs</small>
             </div>
-            <span>আরও<br>দেখুন</span>
+        </div>
+
+
+        <!-- 05 Digital -->
+        <div class="premium-service-item" onclick="handleDigitalServiceClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-orange">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.66-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5z"/>
+                    </svg>
+                </div>
+                <strong>ডিজিটাল সার্ভিস</strong>
+                <small>Digital Solutions</small>
+            </div>
+        </div>
+
+
+        <!-- 06 Social -->
+        <div class="premium-service-item" onclick="handleSocialServiceClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-yellow">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.93 6h-3.95a15.7 15.7 0 0 0-1.05-3.07A8.03 8.03 0 0 1 18.93 8zM12 4c.55.8 1.38 2.13 1.88 4h-3.76C10.62 6.13 11.45 4.8 12 4zM4.26 14a8.1 8.1 0 0 1 0-4h3.4c-.08.65-.16 1.31-.16 2s.08 1.35.16 2h-3.4zm.81 2h3.95c.27 1.1.63 2.13 1.05 3.07A8.03 8.03 0 0 1 5.07 16zM10.12 16h3.76c-.5 1.87-1.33 3.2-1.88 4-.55-.8-1.38-2.13-1.88-4zm.04-2a25.6 25.6 0 0 1-.16-2c0-.69.06-1.35.16-2h3.68c.1.65.16 1.31.16 2s-.06 1.35-.16 2h-3.68zm3.77 5.07c.42-.94.78-1.97 1.05-3.07h3.95a8.03 8.03 0 0 1-5 3.07zM16.34 14c.08-.65.16-1.31.16-2s-.08-1.35-.16-2h3.4a8.1 8.1 0 0 1 0 4h-3.4z"/>
+                    </svg>
+                </div>
+                <strong>সোশ্যাল সার্ভিস</strong>
+                <small>Social Growth</small>
+            </div>
+        </div>
+
+
+        <!-- 07 Website -->
+        <div class="premium-service-item" onclick="handleWebDevClick()">
+            <div class="service-card featured-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-red">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 5h16v11H4V5zm3 14h10v1H7v-1z"/>
+                    </svg>
+                </div>
+                <strong>ওয়েব ডেভেলপমেন্ট</strong>
+                <small>Premium Websites</small>
+            </div>
+        </div>
+
+
+        <!-- 08 Target -->
+        <div class="premium-service-item" onclick="handleTargetBonusClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-orange">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm0-14a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm0-6a2 2 0 1 0 2 2 2 2 0 0 0-2-2z"/>
+                    </svg>
+                </div>
+                <strong>টার্গেট বোনাস</strong>
+                <small>Special Reward</small>
+            </div>
+        </div>
+
+
+        <!-- 09 Leadership -->
+        <div class="premium-service-item" onclick="handleLeaderClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-yellow">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 2c-2 0-6 1-6 3.5V19h12v-2.5c0-2.5-4-3.5-6-3.5zM8 13c-2 0-6 1-6 3.5V19h6v-2.5c0-1.35.55-2.4 1.4-3.2C8.9 13.1 8.4 13 8 13z"/>
+                    </svg>
+                </div>
+                <strong>লিডারশিপ</strong>
+                <small>Build Your Team</small>
+            </div>
+        </div>
+
+
+        <!-- 10 Investment -->
+        <div class="premium-service-item" onclick="handleInvestClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-orange">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm1.1-6.25-.9.92C12.45 12.2 12 12.8 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H7a4 4 0 1 1 8 0c0 1.04-.42 1.99-1.9 2.75z"/>
+                    </svg>
+                </div>
+                <strong>ইনভেস্টমেন্ট</strong>
+                <small>Investment Hub</small>
+            </div>
+        </div>
+
+
+        <!-- 11 Training -->
+        <div class="premium-service-item" onclick="handleTrainingClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-red">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 10.82L5.16 10 12 6.18 18.84 10 12 13.82zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+                    </svg>
+                </div>
+                <strong>ট্রেনিং সেকশন</strong>
+                <small>Learn & Grow</small>
+            </div>
+        </div>
+ <!-- 03 Gmail -->
+        <div class="premium-service-item" onclick="handleGmailCreateClick()">
+            <div class="service-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-yellow">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </div>
+                <strong>জিমেইল ক্রিয়েট</strong>
+                <small>Account Service</small>
+            </div>
+        </div>
+
+<!-- 13 Facebook Sell -->
+<div class="premium-service-item" onclick="handleFacebookSellClick()">
+    <div class="service-card">
+
+        <div class="service-number"></div>
+
+        <div class="service-icon icon-blue">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c.55 0 1.09-.05 1.62-.13v-7.02h-2.35v-2.74h2.35V10.1c0-2.33 1.42-3.61 3.5-3.61.7 0 1.4.06 2.1.18v2.42h-1.18c-1.14 0-1.36.54-1.36 1.33v1.7h2.7l-.37 2.74h-2.33v6.6A10.01 10.01 0 0 0 12 2z"/>
+            </svg>
+        </div>
+
+        <strong>ফেসবুক সেল</strong>
+        <small>Facebook Service</small>
+
+    </div>
+</div>
+
+
+<!-- 14 Telegram Sell -->
+<div class="premium-service-item" onclick="handleTelegramSellClick()">
+    <div class="service-card">
+
+        <div class="service-number"></div>
+
+        <div class="service-icon icon-blue">
+            <svg viewBox="0 0 24 24">
+                <path d="M21.5 3.5 2.9 10.7c-1.27.5-1.26 1.2-.23 1.52l4.77 1.49 1.83 5.58c.22.61.11.86.74.86.49 0 .7-.22.96-.48l2.3-2.24 4.78 3.53c.88.49 1.51.24 1.73-.82l3.14-14.8c.32-1.3-.5-1.88-1.42-1.84zM8.17 13.38l10.91-6.88c.54-.33 1.03-.15.63.2l-8.85 7.99-.34 3.64-1.7-4.95-.65-.2z"/>
+            </svg>
+        </div>
+
+        <strong>টেলিগ্রাম সেল</strong>
+        <small>Telegram Service</small>
+
+    </div>
+</div>
+
+
+<!-- 15 WhatsApp Sell -->
+<div class="premium-service-item" onclick="handleWhatsAppSellClick()">
+    <div class="service-card">
+
+        <div class="service-number"></div>
+
+        <div class="service-icon icon-green">
+            <svg viewBox="0 0 24 24">
+                <path d="M12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.49 1.33 5.01L2 22l5.08-1.3a9.98 9.98 0 0 0 4.96 1.33h.01C17.59 22.03 22 17.53 22 12.04 22 6.5 17.5 2 12.04 2zm5.82 14.2c-.25.7-1.23 1.28-1.69 1.34-.43.06-.98.08-1.58-.1-.36-.11-.82-.27-1.41-.52-2.48-1.07-4.1-3.57-4.22-3.74-.12-.16-1-1.33-1-2.54s.63-1.8.86-2.05c.23-.25.5-.31.66-.31h.48c.16 0 .37-.06.58.44.22.53.75 1.82.82 1.95.07.13.12.29.02.47-.09.18-.14.29-.27.45-.13.16-.27.35-.39.47-.13.13-.26.27-.11.53.15.26.67 1.1 1.44 1.78.99.88 1.82 1.15 2.08 1.28.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.18-.26.35-.22.59-.13.25.09 1.55.73 1.82.86.27.13.45.2.52.31.07.11.07.65-.18 1.35z"/>
+            </svg>
+        </div>
+
+        <strong>হোয়াটসঅ্যাপ সেল</strong>
+        <small>WhatsApp Service</small>
+
+    </div>
+</div>
+
+
+<!-- 16 Instagram Sell -->
+<div class="premium-service-item" onclick="handleInstagramSellClick()">
+    <div class="service-card">
+
+        <div class="service-number"></div>
+
+        <div class="service-icon icon-pink">
+            <svg viewBox="0 0 24 24">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+            </svg>
+        </div>
+
+        <strong>ইন্সটাগ্রাম সেল</strong>
+        <small>Instagram Service</small>
+
+    </div>
+</div>
+
+
+      
+
+        <!-- 12 More -->
+        <div class="premium-service-item" onclick="handleMoreOptionsClick()">
+            <div class="service-card more-card">
+                <div class="service-number"></div>
+                <div class="service-icon icon-dark">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                    </svg>
+                </div>
+                <strong>আরও দেখুন</strong>
+                <small>Explore More</small>
+            </div>
         </div>
 
     </div>
 </div>
+
+
 <style>
-    .photo-grid-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        cursor: pointer;
-        transition: transform 0.1s ease;
+.icon-blue{
+    background:linear-gradient(145deg,#1877f2,#0756c9);
+    box-shadow:0 8px 18px rgba(24,119,242,.24);
+}
+
+.icon-green{
+    background:linear-gradient(145deg,#25d366,#079447);
+    box-shadow:0 8px 18px rgba(37,211,102,.24);
+}
+
+.icon-pink{
+    background:linear-gradient(145deg,#f58529,#dd2a7b,#8134af);
+    box-shadow:0 8px 18px rgba(221,42,123,.24);
+}
+/* ===============================
+   PREMIUM SERVICE HUB
+================================ */
+
+.premium-service-hub{
+    width:100%;
+    margin:14px 0;
+    padding:20px 13px 18px;
+    box-sizing:border-box;
+    background:
+        radial-gradient(circle at 0% 0%,rgba(255,80,0,.055),transparent 32%),
+        radial-gradient(circle at 100% 100%,rgba(255,190,0,.07),transparent 35%),
+        #fff;
+    border:1px solid #f0f0f0;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.055);
+    font-family:'Hind Siliguri','Poppins',sans-serif;
+}
+
+
+/* Header */
+
+.service-hub-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin:0 3px 17px;
+}
+
+.hub-mini-title{
+    font-family:'Poppins',sans-serif;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    color:#e33b00;
+    margin-bottom:2px;
+}
+
+.service-hub-head h3{
+    margin:0;
+    font-size:17px;
+    line-height:1.2;
+    color:#171717;
+    font-weight:850;
+}
+
+
+/* Active Badge */
+
+.hub-status{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding:5px 8px;
+    border-radius:20px;
+    background:#fff6ef;
+    color:#e34b00;
+    font-family:'Poppins',sans-serif;
+    font-size:8px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.hub-status span{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#ff4b00;
+    box-shadow:0 0 0 4px rgba(255,75,0,.09);
+    animation:hubPulse 1.8s infinite;
+}
+
+@keyframes hubPulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.5;transform:scale(.75)}
+}
+
+
+/* Grid */
+
+.premium-service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px 7px;
+}
+
+
+/* Item */
+
+.premium-service-item{
+    min-width:0;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    transition:transform .18s ease;
+}
+
+.premium-service-item:active{
+    transform:scale(.93);
+}
+
+
+/* Card */
+
+.service-card{
+    position:relative;
+    min-height:112px;
+    padding:12px 4px 9px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.98),
+        rgba(250,250,250,.94)
+    );
+
+    border:1px solid #ededed;
+    border-radius:16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.045),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    overflow:hidden;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+/* Top decorative line */
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:18%;
+    width:64%;
+    height:2px;
+    border-radius:0 0 5px 5px;
+    background:linear-gradient(
+        90deg,
+        #e60000,
+        #ff7600,
+        #ffc400
+    );
+    opacity:.75;
+}
+
+
+/* Light corner */
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:45px;
+    height:45px;
+    top:-25px;
+    right:-25px;
+    border-radius:50%;
+    background:rgba(255,90,0,.055);
+}
+
+
+/* Number */
+
+.service-number{
+    position:absolute;
+    top:6px;
+    right:7px;
+    font-family:'Poppins',sans-serif;
+    font-size:7px;
+    font-weight:800;
+    color:#bbb;
+    letter-spacing:.4px;
+}
+
+
+/* Icon */
+
+.service-icon{
+    width:48px;
+    height:48px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+    position:relative;
+    z-index:2;
+
+    box-shadow:
+        0 7px 16px rgba(0,0,0,.11);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.service-icon svg{
+    width:24px;
+    height:24px;
+    fill:#fff;
+    position:relative;
+    z-index:2;
+}
+
+
+/* Icon Shine */
+
+.service-icon::after{
+    content:"";
+    position:absolute;
+    top:4px;
+    left:7px;
+    width:55%;
+    height:30%;
+    border-radius:20px;
+    background:rgba(255,255,255,.25);
+}
+
+
+/* Red */
+
+.icon-red{
+    background:linear-gradient(
+        145deg,
+        #d90000,
+        #ff3d00
+    );
+
+    box-shadow:
+        0 8px 18px rgba(220,0,0,.22);
+}
+
+
+/* Orange */
+
+.icon-orange{
+    background:linear-gradient(
+        145deg,
+        #ff4b00,
+        #ff9d00
+    );
+
+    box-shadow:
+        0 8px 18px rgba(255,110,0,.23);
+}
+
+
+/* Yellow */
+
+.icon-yellow{
+    background:linear-gradient(
+        145deg,
+        #ff9800,
+        #ffc400
+    );
+
+    box-shadow:
+        0 8px 18px rgba(255,175,0,.23);
+}
+
+
+/* Dark */
+
+.icon-dark{
+    background:linear-gradient(
+        145deg,
+        #252525,
+        #555
+    );
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.18);
+}
+
+
+/* Text */
+
+.service-card strong{
+    display:block;
+    width:100%;
+    padding:0 2px;
+    box-sizing:border-box;
+
+    font-size:10px;
+    line-height:1.25;
+    font-weight:850;
+    color:#181818;
+
+    white-space:normal;
+}
+
+.service-card small{
+    display:block;
+    margin-top:3px;
+
+    font-family:'Poppins',sans-serif;
+    font-size:6.5px;
+    line-height:1.1;
+    font-weight:600;
+
+    color:#999;
+    letter-spacing:.1px;
+}
+
+
+/* Featured Website Card */
+
+.featured-card{
+    border-color:rgba(255,70,0,.22);
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff8f3
+        );
+
+    box-shadow:
+        0 6px 18px rgba(255,70,0,.09);
+}
+
+
+/* More Card */
+
+.more-card{
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #f7f7f7
+        );
+}
+
+
+/* Press Effect */
+
+.premium-service-item:active .service-card{
+    box-shadow:
+        0 2px 7px rgba(0,0,0,.06);
+}
+
+.premium-service-item:active .service-icon{
+    transform:translateY(2px) scale(.94);
+}
+
+
+/* Slight floating animation */
+
+.service-card{
+    animation:serviceFloat .4s ease both;
+}
+
+@keyframes serviceFloat{
+    from{
+        opacity:0;
+        transform:translateY(8px);
     }
-    
-    .photo-grid-item:active {
-        transform: scale(0.9);
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* Tablet */
+
+@media(min-width:600px){
+
+    .premium-service-grid{
+        grid-template-columns:repeat(4,1fr);
+        gap:14px;
     }
 
-    .photo-circle {
-        width: 54px;
-        height: 54px;
-        /* অতি উজ্জ্বল নিয়ন গ্রেডিয়েন্ট */
-        background: linear-gradient(135deg, #ff0000 0%, #ff4500 50%, #ff8c00 100%);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 6px;
-        /* উজ্জ্বল শ্যাডো ইফেক্ট */
-        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
-        border: 2px solid #ffffff;
-        position: relative;
+    .service-card{
+        min-height:125px;
     }
 
-    /* হালকা শাইন ইফেক্ট যোগ করা হয়েছে */
-    .photo-circle::after {
-        content: '';
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        width: 80%;
-        height: 40%;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
-        border-radius: 50px 50px 0 0;
+    .service-icon{
+        width:54px;
+        height:54px;
     }
 
-    .photo-circle i {
-        color: white;
-        font-size: 22px;
-        z-index: 1; /* আইকন শাইনের উপরে থাকবে */
-        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .service-icon svg{
+        width:27px;
+        height:27px;
     }
 
-    .photo-grid-item span {
-        font-size: 10px;
-        font-weight: 800;
-        color: #111; /* টেক্সট আরও গাঢ় করা হয়েছে */
-        line-height: 1.1;
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-        margin-top: 2px;
+    .service-card strong{
+        font-size:12px;
     }
+
+}
+
+
+/* Very Small Phones */
+
+@media(max-width:350px){
+
+    .premium-service-hub{
+        padding-left:9px;
+        padding-right:9px;
+    }
+
+    .premium-service-grid{
+        gap:8px 5px;
+    }
+
+    .service-card{
+        min-height:105px;
+        border-radius:14px;
+    }
+
+    .service-icon{
+        width:43px;
+        height:43px;
+        border-radius:13px;
+        margin-bottom:7px;
+    }
+
+    .service-icon svg{
+        width:21px;
+        height:21px;
+    }
+
+    .service-card strong{
+        font-size:9px;
+    }
+
+    .service-card small{
+        font-size:5.5px;
+    }
+
+}
+
+
+/* Reduce motion */
+
+@media(prefers-reduced-motion:reduce){
+
+    .service-card,
+    .service-icon,
+    .premium-service-item{
+        animation:none!important;
+        transition:none!important;
+    }
+
+}
+
 </style>
+
+
+
+
+      
 <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
+<!-- ================= PREMIUM RIGHT SIDEBAR ================= -->
 <div id="right-sidebar" class="side-drawer">
-    <div class="drawer-content" style="background: #ffffff; height: 100vh; width: 280px; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
-        
-        <!-- প্রিমিয়াম লাল-হলুদ মিক্সচার ব্যাকগ্রাউন্ড (শার্প চারকোনা লুক) -->
 
-        <div class="drawer-header" style="background: linear-gradient(135deg, #e60000 0%, #ff4500 45%, #ff9900 100%); padding: 35px 20px 25px; position: relative; z-index: 10; flex-shrink: 0; box-shadow: 0 10px 30px rgba(230, 0, 0, 0.25); overflow: hidden; border-radius: 0px;">
+    <div class="drawer-content">
 
-            
-
-            <!-- ব্যাকগ্রাউন্ড লাইٹنگ ইফেক্ট -->
-
-            <div style="position: absolute; top: -50px; right: -50px; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.12); filter: blur(20px); border-radius: 50%; pointer-events: none;"></div>
-
-            <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.08); filter: blur(15px); border-radius: 50%; pointer-events: none;"></div>
-
-
-
-            <div style="text-align: center; position: relative; z-index: 2;">
-
-                
-<!-- প্রোফাইল পিকচার (নতুন রেজিস্ট্রেশনে লোগো দেখাবে, চেঞ্জ করলে ইউজারের ফটো) -->
-<div style="position: relative; display: inline-block; margin-bottom: 5px;">
-    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg" 
-         id="user-dp" 
-         alt="User Profile"
-         style="width: 85px; height: 85px; border-radius: 4px; border: 2.5px solid rgba(255, 255, 255, 0.7); object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.25); transition: 0.3s;">
-    
-    <!-- একটিভ ডট -->
-    <div style="position: absolute; bottom: -4px; right: -4px; background: #2ecc71; width: 14px; height: 14px; border-radius: 2px; border: 2.5px solid #ff4500; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
-</div>
-                <!-- ইউজার নেম -->
-                <h5 id="user-name" style="font-weight: 800; color: #ffffff; margin: 12px 0 10px; font-size: 19px; letter-spacing: 0.8px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">Abu Sufian</h5>
-                
-                <!-- গ্লাস মরফিজম র‍্যাঙ্ক কার্ড (শার্প চারকোনা) -->
-                <div style="display: flex; justify-content: center;">
-                    <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 6px 14px; border-radius: 4px; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
-                        <i class="fas fa-crown" style="font-size: 10px; color: #ffffff;"></i> 
-                        <span id="user-rank" style="font-size: 10px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 0.8px;">General Member</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- গ্লাস মরফিজম রেফার কার্ড (শার্প চারকোনা) -->
-            <div id="refer-section" class="ref-card-modern" 
-                 style="display: flex; margin-top: 18px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 4px; align-items: center; justify-content: space-between; max-width: 250px; margin-left: auto; margin-right: auto; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
-                
-                <div style="display: flex; align-items: center; gap: 6px;">
-                    <i class="fas fa-gift" style="color: #ffffff; font-size: 11px;"></i>
-                    <span style="font-size: 10px; color: rgba(255, 255, 255, 0.85); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Refer:</span>
-                    <b id="user-ref" style="color: #ffffff; font-size: 13px; letter-spacing: 1px; font-weight: 900;">XYZ123</b>
-                </div>
-                
-                <i class="far fa-copy" onclick="copyRef()" 
-                   style="color: rgba(255, 255, 255, 0.85); cursor: pointer; font-size: 13px; transition: all 0.2s ease; padding: 4px;" 
-                   onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.15)';" 
-                   onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'; this.style.transform='scale(1)';"></i>
-            </div>
-        </div>
-        
-        <!-- সিএসএস স্টাইল (আলাদা আলাদা বাটন কার্ডের প্রিমিয়াম ইফেক্ট) -->
         <style>
-            .custom-menu-btn {
-                background: #f8fafc !important; /* হালকা কার্ড ব্যাকগ্রাউন্ড */
-                border: 1px solid #f1f5f9 !important; /* চারদিকের ফাইন বর্ডার */
-                border-bottom: 2px solid #e2e8f0 !important; /* নিচে একটু চওড়া বর্ডার কার্ড ফিল দেওয়ার জন্য */
-                border-radius: 4px !important; /* প্রফেশনাল চারকোনা শেপ */
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
-                margin-bottom: 2px;
-                transition: all 0.2s ease-in-out !important;
+
+        /* =========================================
+           PREMIUM SIDEBAR
+        ========================================= */
+
+        .drawer-content{
+            width:300px;
+            height:100vh;
+            height:100dvh;
+            display:flex;
+            flex-direction:column;
+            overflow:hidden;
+
+            color:#202020;
+            font-family:'Poppins','Hind Siliguri',sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(255,190,0,.08),
+                    transparent 28%
+                ),
+                #f7f8fb;
+
+            box-shadow:
+                -18px 0 55px rgba(0,0,0,.16);
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .drawer-header{
+            position:relative;
+            flex-shrink:0;
+            overflow:hidden;
+
+            padding:28px 17px 17px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 8%,
+                    rgba(255,255,255,.25),
+                    transparent 24%
+                ),
+                radial-gradient(
+                    circle at 8% 100%,
+                    rgba(255,210,0,.18),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    145deg,
+                    #8f0000 0%,
+                    #d90000 38%,
+                    #ff5a00 72%,
+                    #ffb300 100%
+                );
+
+            border-radius:0 0 28px 28px;
+
+            box-shadow:
+                0 14px 35px rgba(180,0,0,.25);
+        }
+
+
+        /* Decorative circles */
+
+        .drawer-header:before{
+            content:"";
+            position:absolute;
+
+            width:180px;
+            height:180px;
+
+            top:-125px;
+            right:-75px;
+
+            border-radius:50%;
+
+            background:
+                rgba(255,255,255,.13);
+
+            box-shadow:
+                0 0 50px rgba(255,255,255,.08);
+        }
+
+        .drawer-header:after{
+            content:"";
+            position:absolute;
+
+            width:145px;
+            height:145px;
+
+            bottom:-105px;
+            left:-70px;
+
+            border-radius:50%;
+
+            background:
+                rgba(255,255,255,.09);
+        }
+
+
+        /* =========================================
+           PROFILE
+        ========================================= */
+
+        .profile-wrap{
+            position:relative;
+            z-index:2;
+            text-align:center;
+        }
+
+        .profile-photo{
+            position:relative;
+            display:inline-block;
+        }
+
+        .profile-photo img{
+            width:78px;
+            height:78px;
+
+            object-fit:cover;
+
+            border-radius:24px;
+
+            border:3px solid rgba(255,255,255,.95);
+
+            box-shadow:
+                0 12px 28px rgba(0,0,0,.28),
+                0 0 0 6px rgba(255,255,255,.08);
+
+            transition:.3s ease;
+        }
+
+        .profile-photo img:active{
+            transform:scale(.96);
+        }
+
+
+        /* Online */
+
+        .active-dot{
+            position:absolute;
+
+            right:-5px;
+            bottom:1px;
+
+            width:14px;
+            height:14px;
+
+            border-radius:50%;
+
+            background:#22c55e;
+
+            border:3px solid #e33a13;
+
+            box-shadow:
+                0 0 0 3px rgba(255,255,255,.12),
+                0 3px 8px rgba(0,0,0,.25);
+        }
+
+
+        #user-name{
+            margin:10px 0 6px;
+
+            color:#fff;
+
+            font-size:17px;
+            font-weight:850;
+
+            letter-spacing:.3px;
+
+            text-shadow:
+                0 3px 10px rgba(0,0,0,.22);
+        }
+
+
+        /* Rank */
+
+        .rank-card{
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+
+            padding:5px 11px;
+
+            border-radius:30px;
+
+            background:
+                rgba(255,255,255,.14);
+
+            border:
+                1px solid rgba(255,255,255,.25);
+
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+        }
+
+        .rank-card i{
+            color:#ffe45c;
+            font-size:10px;
+        }
+
+        .rank-card span{
+            color:#fff;
+
+            font-size:9px;
+            font-weight:800;
+
+            letter-spacing:.5px;
+        }
+
+
+        /* =========================================
+           REFERRAL CARD
+        ========================================= */
+
+        .ref-card-modern{
+            position:relative;
+            z-index:2;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            margin:16px auto 0;
+
+            max-width:260px;
+
+            padding:9px 10px;
+
+            border-radius:14px;
+
+            background:
+                rgba(255,255,255,.13);
+
+            border:
+                1px solid rgba(255,255,255,.24);
+
+            backdrop-filter:blur(15px);
+            -webkit-backdrop-filter:blur(15px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,.10);
+        }
+
+        .ref-left{
+            display:flex;
+            align-items:center;
+            gap:7px;
+
+            min-width:0;
+        }
+
+        .ref-left i{
+            color:#ffe45c;
+            font-size:10px;
+        }
+
+        .ref-left span{
+            color:rgba(255,255,255,.78);
+
+            font-size:8px;
+            font-weight:700;
+
+            text-transform:uppercase;
+        }
+
+        #user-ref{
+            color:#fff;
+
+            font-size:11px;
+            font-weight:900;
+
+            letter-spacing:1px;
+        }
+
+        .copy-ref{
+            color:#fff;
+
+            padding:5px;
+
+            border-radius:7px;
+
+            font-size:12px;
+
+            cursor:pointer;
+
+            transition:.2s ease;
+        }
+
+        .copy-ref:active{
+            transform:scale(.85);
+            background:rgba(255,255,255,.16);
+        }
+
+
+        /* =========================================
+           MENU
+        ========================================= */
+
+        .scrollable-menu{
+            flex:1;
+
+            overflow-y:auto;
+
+            padding:16px 13px 14px;
+
+            scrollbar-width:thin;
+            scrollbar-color:#d6d9df transparent;
+        }
+
+        .scrollable-menu::-webkit-scrollbar{
+            width:4px;
+        }
+
+        .scrollable-menu::-webkit-scrollbar-thumb{
+            background:#d5d9df;
+            border-radius:20px;
+        }
+
+        .menu-group{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+
+
+        /* =========================================
+           MENU BUTTON
+        ========================================= */
+
+        .custom-menu-btn{
+            position:relative;
+
+            display:flex;
+            align-items:center;
+
+            width:100%;
+
+            min-height:55px;
+
+            padding:8px 9px;
+
+            box-sizing:border-box;
+
+            border:1px solid #eceef2 !important;
+            border-radius:16px !important;
+
+            background:
+                rgba(255,255,255,.96) !important;
+
+            box-shadow:
+                0 4px 13px rgba(15,23,42,.035),
+                0 1px 2px rgba(15,23,42,.035) !important;
+
+            color:#30343b;
+
+            cursor:pointer;
+
+            overflow:hidden;
+
+            transition:
+                transform .18s ease,
+                box-shadow .18s ease,
+                border-color .18s ease;
+        }
+
+
+        /* left active line */
+
+        .custom-menu-btn:before{
+            content:"";
+
+            position:absolute;
+
+            left:0;
+            top:12px;
+            bottom:12px;
+
+            width:3px;
+
+            border-radius:0 6px 6px 0;
+
+            background:
+                linear-gradient(
+                    #e60000,
+                    #ffb000
+                );
+
+            opacity:0;
+
+            transition:.2s ease;
+        }
+
+
+        .custom-menu-btn:hover{
+            transform:translateX(-2px);
+
+            border-color:#e7e9ed !important;
+
+            box-shadow:
+                0 9px 22px rgba(15,23,42,.075) !important;
+        }
+
+        .custom-menu-btn:hover:before{
+            opacity:1;
+        }
+
+        .custom-menu-btn:active{
+            transform:scale(.965);
+
+            box-shadow:
+                0 3px 8px rgba(15,23,42,.06) !important;
+        }
+
+
+        /* =========================================
+           ICON
+        ========================================= */
+
+        .icon-box{
+            position:relative;
+
+            width:36px !important;
+            height:36px !important;
+
+            min-width:36px;
+
+            margin-right:11px !important;
+
+            display:flex;
+
+            align-items:center;
+            justify-content:center;
+
+            border-radius:12px !important;
+
+            box-shadow:
+                0 6px 13px rgba(0,0,0,.11) !important;
+
+            overflow:hidden;
+
+            transition:.2s ease;
+        }
+
+        .icon-box:after{
+            content:"";
+
+            position:absolute;
+
+            top:4px;
+            left:6px;
+
+            width:55%;
+            height:28%;
+
+            border-radius:20px;
+
+            background:
+                rgba(255,255,255,.22);
+        }
+
+        .custom-menu-btn:hover .icon-box{
+            transform:
+                translateY(-1px)
+                scale(1.06);
+        }
+
+
+        /* =========================================
+           TEXT
+        ========================================= */
+
+        .menu-text{
+            flex:1;
+
+            text-align:left;
+
+            color:#343840;
+
+            font-family:
+                'Hind Siliguri',
+                'Poppins',
+                sans-serif;
+
+            font-size:12.5px;
+            font-weight:700;
+
+            white-space:nowrap;
+        }
+
+
+        /* =========================================
+           ARROW
+        ========================================= */
+
+        .menu-arrow{
+            width:25px;
+            height:25px;
+
+            display:flex;
+
+            align-items:center;
+            justify-content:center;
+
+            border-radius:9px;
+
+            background:#f7f8fa;
+
+            color:#a4a8af;
+
+            font-size:8px;
+
+            transition:.2s ease;
+        }
+
+        .custom-menu-btn:hover .menu-arrow{
+            color:#e60000;
+
+            background:#fff1ef;
+
+            transform:translateX(-2px);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .drawer-footer{
+            flex-shrink:0;
+
+            padding:10px 13px 13px;
+
+            background:
+                rgba(255,255,255,.96);
+
+            border-top:
+                1px solid #eceef2;
+
+            box-shadow:
+                0 -7px 18px rgba(0,0,0,.035);
+        }
+
+
+        /* Logout */
+
+        .logout-btn{
+            position:relative;
+
+            display:flex;
+            align-items:center;
+
+            width:100%;
+
+            min-height:48px;
+
+            padding:7px 9px;
+
+            box-sizing:border-box;
+
+            border-radius:15px !important;
+
+            border:1px solid #ffe0e3 !important;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8f8,
+                    #fff0f2
+                ) !important;
+
+            box-shadow:
+                0 5px 14px rgba(225,29,72,.05) !important;
+
+            cursor:pointer;
+
+            transition:.2s ease;
+        }
+
+        .logout-btn:active{
+            transform:scale(.97);
+        }
+
+
+        .logout-icon{
+            width:32px;
+            height:32px;
+
+            min-width:32px;
+
+            display:flex;
+
+            align-items:center;
+            justify-content:center;
+
+            margin-right:10px;
+
+            border-radius:11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe2e6,
+                    #ffd5da
+                );
+
+            color:#e11d48;
+
+            font-size:11px;
+        }
+
+        .logout-text{
+            color:#dc183f;
+
+            font-family:
+                'Hind Siliguri',
+                'Poppins',
+                sans-serif;
+
+            font-size:12px;
+            font-weight:850;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media(max-width:360px){
+
+            .drawer-content{
+                width:275px;
             }
-            /* বাটনে ক্লিক বা স্পর্শ করলে যে ইফেক্ট হবে */
-            .custom-menu-btn:active {
-                background: #f1f5f9 !important;
-                border-bottom: 1px solid #cbd5e1 !important;
-                transform: translateY(1px);
-                box-shadow: none !important;
+
+            .drawer-header{
+                padding:
+                    25px 14px 15px;
             }
+
+            .profile-photo img{
+                width:72px;
+                height:72px;
+                border-radius:21px;
+            }
+
+            #user-name{
+                font-size:16px;
+            }
+
+            .custom-menu-btn{
+                min-height:53px;
+            }
+
+            .menu-text{
+                font-size:12px;
+            }
+
+            .icon-box{
+                width:34px !important;
+                height:34px !important;
+                min-width:34px;
+            }
+
+        }
+
         </style>
 
-        <!-- স্ক্রোলযোগ্য মেনু সেকশন (আলাদা আলাদা বাটন কার্ড ভিউ) -->
-        <div class="scrollable-menu" style="flex: 1; overflow-y: auto; padding: 18px 14px; background: #ffffff;">
-            <div class="menu-group" style="display: flex; flex-direction: column; gap: 8px;"> <!-- গ্যাপ বাড়িয়ে আলাদা করা হয়েছে -->
 
-                <!-- ১. Home (Royal Blue Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('home'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(30,60,114,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-th-large" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">হোমপেজ</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+        <!-- =========================================
+             HEADER
+        ========================================= -->
 
-                <!-- ২. Deposit (Emerald Green Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-fund'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(17,153,142,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-plus-circle" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">ভাউচার বেলেন্স</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+        <div class="drawer-header">
 
-                <!-- ৩. Withdraw (Sunset Orange Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-withdraw'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(255,78,80,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-arrow-alt-circle-down" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">বেলেন্স উওলোন</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+            <div class="profile-wrap">
 
-                <!-- ৪. Transactions (Deep Purple Gradient) -->
-                <button class="custom-menu-btn" onclick="openTransactionPage(); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(101,78,163,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-wallet" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">লেনদেনর ইতিহাস</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+                <div class="profile-photo">
 
-                <!-- ৫. Settings (Steel Tech Grey Gradient) -->
-                <button class="custom-menu-btn" onclick="openSettings(); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #617ca5 0%, #2b384e 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(43,56,78,0.15); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-sliders-h" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">একাউন্ট সেটিংস </span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+                    <img
+                        src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/FB_IMG_1782142091511.jpg"
+                        id="user-dp"
+                        alt="User Profile"
+                    >
 
-                <!--Adapter ৬. Admin Profile (Luxury Coral Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-admin-profile'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(248,87,166,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-user-check" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">এডমিন প্রোফাইল</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+                    <div class="active-dot"></div>
 
-                <!-- ৭. Privacy Policy (Cyan Ocean Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('privacy'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(0,114,255,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-user-lock" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">গোপনীয়তা নীতি</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+                </div>
 
-                <!-- ৮. About Us (Plum Maroon Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-about'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #f43f5e 0%, #85144b 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(244,63,94,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-id-card" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">নিয়মাবলী শর্তাবলী</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+
+                <h5 id="user-name">
+                    Abu Sufian
+                </h5>
+
+
+                <div class="rank-card">
+
+                    <i class="fas fa-crown"></i>
+
+                    <span id="user-rank">
+                        General Member
+                    </span>
+
+                </div>
 
             </div>
+
+
+            <!-- REFERRAL -->
+
+            <div
+                id="refer-section"
+                class="ref-card-modern"
+            >
+
+                <div class="ref-left">
+
+                    <i class="fas fa-gift"></i>
+
+                    <span>
+                        Refer
+                    </span>
+
+                    <b id="user-ref">
+                        XYZ123
+                    </b>
+
+                </div>
+
+
+                <i
+                    class="far fa-copy copy-ref"
+                    onclick="copyRef()"
+                ></i>
+
+            </div>
+
         </div>
 
-        <!-- ফুটার লগআউট বাটন (কার্ড লুকের সাথে মিল রেখে সুন্দর ফিনিশিং) -->
-        <div style="padding: 12px 14px; background: #ffffff; border-top: 1px solid #f1f5f9; flex-shrink: 0;">
-            <button class="custom-menu-btn logout-btn" onclick="logout()" style="background: #fff1f2 !important; border: 1px solid #ffe4e6 !important; border-bottom: 2px solid #fecdd3 !important; display: flex; align-items: center; padding: 10px 10px; border-radius: 4px !important; width: 100%; cursor: pointer; margin-bottom: 0;">
-                <span class="icon-box" style="background: #ffe4e6; color: #e11d48; width: 26px; height: 26px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 11px; flex-shrink: 0;">
+
+
+        <!-- =========================================
+             MENU
+        ========================================= -->
+
+        <div class="scrollable-menu">
+
+            <div class="menu-group">
+
+
+                <!-- HOME -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('home'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #1e3c72,
+                            #2a5298
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-th-large"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        হোমপেজ
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- BALANCE -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('p-fund'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #11998e,
+                            #38ef7d
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-plus-circle"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        ভাউচার বেলেন্স
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- WITHDRAW -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('p-withdraw'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #ff4e50,
+                            #f9d423
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-arrow-alt-circle-down"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        বেলেন্স উত্তোলন
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- TRANSACTION -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openTransactionPage(); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #654ea3,
+                            #eaafc8
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-wallet"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        লেনদেনের ইতিহাস
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- SETTINGS -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openSettings(); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #617ca5,
+                            #2b384e
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-sliders-h"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        একাউন্ট সেটিংস
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- ADMIN -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('p-admin-profile'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #f857a6,
+                            #ff5858
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-user-check"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        এডমিন প্রোফাইল
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- PRIVACY -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('privacy'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #00c6ff,
+                            #0072ff
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-user-lock"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        গোপনীয়তা নীতি
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- TERMS -->
+
+                <button
+                    class="custom-menu-btn"
+                    onclick="openPage('p-about'); toggleSidebar()"
+                >
+
+                    <span
+                        class="icon-box"
+                        style="
+                        background:linear-gradient(
+                            135deg,
+                            #f43f5e,
+                            #85144b
+                        );
+                        color:#fff;"
+                    >
+
+                        <i
+                            class="fas fa-id-card"
+                            style="font-size:11px;"
+                        ></i>
+
+                    </span>
+
+                    <span class="menu-text">
+                        নিয়মাবলী ও শর্তাবলী
+                    </span>
+
+                    <span class="menu-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             LOGOUT
+        ========================================= -->
+
+        <div class="drawer-footer">
+
+            <button
+                class="logout-btn"
+                onclick="logout()"
+            >
+
+                <span class="logout-icon">
+
                     <i class="fas fa-sign-out-alt"></i>
-                </span> 
-<span style="color: #e11d48; font-weight: 700; font-size: 12px; letter-spacing: 0.3px;">লগ আউট</span>
+
+                </span>
+
+
+                <span class="logout-text">
+                    লগ আউট
+                </span>
+
+
+                <span
+                    style="
+                    margin-left:auto;
+                    color:#fda4af;
+                    font-size:9px;"
+                >
+
+                    <i class="fas fa-chevron-right"></i>
+
+                </span>
+
+            </button>
+
         </div>
 
     </div>
+
 </div>
+
+      
 <div id="p-admin-profile" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
 
     <!-- হেডার: প্রিমিয়াম রেড-ইয়েলো গ্রেডিয়েন্ট -->
@@ -4394,241 +7730,286 @@ function togglePassword() {
 
 </div>
 
-<div id="p-withdraw" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; font-family: 'Poppins', sans-serif;">
-    <div style="background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%); padding: 18px 16px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.15);">
+      <div id="p-withdraw" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; font-family: 'Poppins', sans-serif;">
     
-    <div style="display: flex; align-items: center; gap: 12px;">
-        <div onclick="closePage('p-withdraw')" style="width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); transition: 0.2s;" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">
-            <i class="fas fa-chevron-left" style="font-size: 14px; color: white;"></i>
-        </div>
-        <h4 style="margin: 0; font-weight: 700; color: white; font-size: 18px; letter-spacing: 0.5px; font-family: 'Poppins', sans-serif;">Withdraw Balance</h4>
-    </div>
-
-    <div onclick="openPage('p-withdraw-history')" style="width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px); transition: 0.2s;" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">
-        <i class="fas fa-history" style="font-size: 15px; color: white;"></i>
-    </div>
-</div>
-
-
-
-
-<div class="container px-3 mt-4">
-
-    <div style="background: linear-gradient(135deg, #ff0000 0%, #ffaa00 100%); padding: 25px 20px; border-radius: 4px; color: white; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); font-family: 'Poppins', sans-serif;">
-
-        
-
-        <div style="position: absolute; top: -30%; right: -5%; width: 150px; height: 150px; background: rgba(255,255,255,0.08); border-radius: 12px; transform: rotate(45deg);"></div>
-
-        
-
-        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.85; display: block;">Available for Payout</span>
-
-        <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-
-            <h2 style="margin: 0; font-weight: 900; font-size: 38px; text-shadow: 0 3px 8px rgba(0,0,0,0.12);">৳ <span id="withdraw-bal">0.00</span></h2>
-
+    <!-- প্রিমিয়াম হেডার -->
+    <div style="background: linear-gradient(135deg, #d31027 0%, #ea384d 50%, #ff512f 100%); padding: 16px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 20px rgba(211, 16, 39, 0.25);">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <div onclick="closePage('p-withdraw')" style="width: 38px; height: 38px; background: rgba(255,255,255,0.18); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s ease;">
+                <i class="fas fa-chevron-left" style="font-size: 14px; color: white;"></i>
+            </div>
+            <h4 style="margin: 0; font-weight: 700; color: white; font-size: 17px; letter-spacing: 0.3px;">Withdraw Balance</h4>
         </div>
 
-    </div>
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 12px; padding: 12px; margin-bottom: 15px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <!-- Info (i) Icon for Instructions Popup -->
+            <div onclick="toggleWithdrawRules(true)" style="width: 38px; height: 38px; background: rgba(255,255,255,0.18); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(10px); transition: all 0.2s ease;">
+                <i class="fas fa-info" style="font-size: 15px; color: white;"></i>
+            </div>
 
-    <!-- হেডার অংশ -->
-
-    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-
-        <i class="fas fa-wallet" style="color: #d97706; font-size: 14px;"></i>
-
-        <span style="font-size: 13px; color: #92400e; font-weight: 800;">উইথড্রয়াল নির্দেশনা</span>
-
-    </div>
-
-    
-
-    <!-- মূল কন্টেন্ট -->
-
-    <div style="font-size: 12px; color: #b45309; margin: 0; line-height: 1.6; font-weight: 600;">
-
-
-        
-
-        <!-- নিয়মের তালিকা -->
-
-        <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px dashed #fcd34d; padding-top: 6px; margin-top: 6px;">
-
-            <div>📌 সর্বনিম্ন উত্তোলন ১০০ টাকা এবং সর্বোচ্চ উত্তোলন ২৫,০০০ টাকা।</div>
-
-            <div>✅ লিমিট: ২৪ ঘণ্টার মধ্যে ১ বার উত্তোলন করা যাবে।</div>
-
-            <div>✅ উত্তোলন চার্জ: ১০০ থেকে ৩০০ টাকায় ৫ টাকা।</div>
-
-            <div>✅ ৩০০ টাকার বেশি উত্তোলন করলে প্রতি উত্তোলনে ২% চার্জ কাটা হবে।</div>
-
-        </div>
-
-    </div>
-
-</div>
-<p style="font-size: 13px; font-weight: 700; color: #64748b; margin-bottom: 12px; padding-left: 5px; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Poppins', sans-serif;">Choose Payout Method</p>
-
-
-
-
-
-<div style="display: flex; gap: 12px; margin-bottom: 20px;">
-    
-    <!-- bKash Card -->
-    <div style="flex: 1;" onclick="selectWithdrawMethod('Bkash')">
-        <div class="w-method-card" id="w-Bkash" style="background: #ffffff; position: relative; height: 75px; border-radius: 4px; border: 1px solid #e2e8f0; border-bottom: 3px solid #cbd5e1; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.03); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 6px;">
-            <!-- কার্ডের ভেতরে সুন্দরভাবে ফিট হওয়া ফুল লোগো -->
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(1).png" 
-                 alt="bKash" 
-                 style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
-        </div>
-    </div>
-
-    <!-- Nagad Card -->
-    <div style="flex: 1;" onclick="selectWithdrawMethod('Nagad')">
-        <div class="w-method-card" id="w-Nagad" style="background: #ffffff; position: relative; height: 75px; border-radius: 4px; border: 1px solid #e2e8f0; border-bottom: 3px solid #cbd5e1; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.03); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 6px;">
-            <!-- কার্ডের ভেতরে সুন্দরভাবে ফিট হওয়া ফুল লোগো -->
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(2).png" 
-                 alt="Nagad" 
-                 style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
-        </div>
-    </div>
-
-<!-- Binance Card -->
-<div style="flex: 1;" onclick="selectWithdrawMethod('Binance')">
-    <div class="w-method-card" id="w-Binance" style="background: #ffffff; position: relative; height: 75px; border-radius: 4px; border: 1px solid #e2e8f0; border-bottom: 3px solid #cbd5e1; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.03); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 6px;">
-        
-        <!-- আপনার দেওয়া বাইনান্স লোগো লিংক -->
-        <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(4).png" 
-             alt="Binance" 
-             style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
-             
-    </div>
-
-    </div>
-
-</div>
-
-<!-- একটিভ/ক্লিক ইফেক্টের জন্য CSS (যদি অলরেডি না থাকে) -->
-<style>
-    .w-method-card:active {
-        transform: translateY(1px);
-        border-bottom-width: 1px !important;
-        box-shadow: none !important;
-    }
-</style>
-
-
-<div style="background: #ffffff; padding: 20px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 30px; font-family: 'Poppins', sans-serif;">
-    
-    <div style="margin-bottom: 20px;">
-        <label style="display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Account Number</label>
-        <input type="number" id="w-num" placeholder="01XXXXXXXXX" 
-               style="width: 100%; padding: 14px 16px; border-radius: 4px; border: 1px solid #cbd5e1; background: #f8fafc; font-weight: 700; font-size: 15px; color: #1e293b; outline: none; transition: all 0.2s ease;"
-               onfocus="this.style.border='1px solid #ff0000'; this.style.background='#ffffff'; this.style.boxShadow='0 0 0 3px rgba(255,0,0,0.1)';" 
-               onblur="this.style.border='1px solid #cbd5e1'; this.style.background='#f8fafc'; this.style.boxShadow='none';">
-    </div>
-
-    <div style="margin-bottom: 24px;">
-        <label style="display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Withdraw Amount</label>
-        <input type="number" id="w-amt" placeholder="Enter amount" 
-               style="width: 100%; padding: 14px 16px; border-radius: 4px; border: 1px solid #cbd5e1; background: #f8fafc; font-weight: 700; font-size: 15px; color: #1e293b; outline: none; transition: all 0.2s ease;"
-               onfocus="this.style.border='1px solid #ff0000'; this.style.background='#ffffff'; this.style.boxShadow='0 0 0 3px rgba(255,0,0,0.1)';" 
-               onblur="this.style.border='1px solid #cbd5e1'; this.style.background='#f8fafc'; this.style.boxShadow='none';">
-    </div>
-
-    <button onclick="withdrawReq()" 
-            style="width: 100%; background: linear-gradient(135deg, #ff0000 0%, #ff6a00 100%); color: white; border: none; padding: 16px; border-radius: 4px; font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 16px rgba(255, 0, 0, 0.15); cursor: pointer; transition: all 0.2s ease;"
-            onmouseover="this.style.boxShadow='0 8px 22px rgba(255, 0, 0, 0.25)';" 
-            onmouseout="this.style.boxShadow='0 6px 16px rgba(255, 0, 0, 0.15)';"
-            onmousedown="this.style.transform='scale(0.98)';"
-            onmouseup="this.style.transform='scale(1)';">
-        Submit Withdrawal
-    </button>
-</div>
+            <!-- History Icon -->
+            <div onclick="openPage('p-withdraw-history')" style="width: 38px; height: 38px; background: rgba(255,255,255,0.18); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(10px); transition: all 0.2s ease;">
+                <i class="fas fa-history" style="font-size: 15px; color: white;"></i>
             </div>
         </div>
-<style>
-    /* সিলেকশন হলে বর্ডার কালার পরিবর্তনের জন্য */
-    .w-method-card.active-method {
-        border-color: #ff0000 !important;
-        background: #fff1f2 !important;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(255, 0, 0, 0.1);
-    }
-    input:focus {
-        border-color: #ff0000 !important;
-        background: #ffffff !important;
-        box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.05);
-    }
-</style>
+    </div>
+
+    <div class="container px-3 mt-3">
+
+        <!-- ব্যালেন্স ডিসপ্লে কার্ড -->
+        <div style="background: linear-gradient(135deg, #e11d48 0%, #f43f5e 50%, #fb923c 100%); padding: 22px 20px; border-radius: 12px; color: white; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(225, 29, 72, 0.2); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+            <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: rgba(255,255,255,0.12); border-radius: 50%; pointer-events: none;"></div>
+            <div style="position: absolute; bottom: -40px; left: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.08); border-radius: 50%; pointer-events: none;"></div>
+
+            <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255, 255, 255, 0.9); display: block;">Available for Payout</span>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                <h2 style="margin: 0; font-weight: 800; font-size: 36px; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.15);">৳ <span id="withdraw-bal">0.00</span></h2>
+            </div>
+        </div>
+
+        <!-- পেমেন্ট মেথড টাইটেল -->
+        <p style="font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 10px; padding-left: 2px; text-transform: uppercase; letter-spacing: 0.8px;">Choose Payout Method</p>
+
+        <!-- মেথড সিলেক্টর কার্ডস -->
+        <div style="display: flex; gap: 10px; margin-bottom: 22px;">
+            <!-- bKash -->
+            <div style="flex: 1;" onclick="selectWithdrawMethod('Bkash')">
+                <div class="w-method-card" id="w-Bkash">
+                    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(1).png" alt="bKash">
+                </div>
+            </div>
+
+            <!-- Nagad -->
+            <div style="flex: 1;" onclick="selectWithdrawMethod('Nagad')">
+                <div class="w-method-card" id="w-Nagad">
+                    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(2).png" alt="Nagad">
+                </div>
+            </div>
+
+            <!-- Binance -->
+            <div style="flex: 1;" onclick="selectWithdrawMethod('Binance')">
+                <div class="w-method-card" id="w-Binance">
+                    <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(4).png" alt="Binance">
+                </div>
+            </div>
+        </div>
+
+        <!-- ফর্ম বক্স -->
+        <div style="background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; margin-bottom: 30px;">
+            
+            <div style="margin-bottom: 18px;">
+                <label style="display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">Account Number</label>
+                <input type="number" id="w-num" class="form-input-field" placeholder="01XXXXXXXXX">
+            </div>
+
+            <div style="margin-bottom: 22px;">
+                <label style="display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">Withdraw Amount</label>
+                <input type="number" id="w-amt" class="form-input-field" placeholder="Enter amount">
+            </div>
+
+            <button onclick="withdrawReq()" class="submit-btn">
+                Submit Withdrawal
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- নির্দেশনার পপআপ (Instructions Modal) -->
+<div id="withdraw-rules-modal" class="rules-modal-overlay">
+    <div class="rules-modal-content">
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="width: 28px; height: 28px; background: #fef3c7; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-info-circle" style="color: #d97706; font-size: 14px;"></i>
+                </div>
+                <h5 style="margin: 0; font-size: 15px; font-weight: 700; color: #1e293b;">উইথড্রয়াল নির্দেশনা</h5>
+            </div>
+            <i class="fas fa-times" onclick="toggleWithdrawRules(false)" style="cursor: pointer; color: #94a3b8; font-size: 16px; padding: 4px;"></i>
+        </div>
+
+        <div style="font-size: 13px; color: #334155; line-height: 1.7; font-weight: 500;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="background: #f8fafc; padding: 8px 10px; border-radius: 6px; border-left: 3px solid #e11d48;">
+                    📌 সর্বনিম্ন উত্তোলন <b>১০০ টাকা</b> এবং সর্বোচ্চ <b>২৫,০০০ টাকা</b>।
+                </div>
+                <div style="background: #f8fafc; padding: 8px 10px; border-radius: 6px; border-left: 3px solid #10b981;">
+                    ✅ লিমিট: ২৪ ঘণ্টার মধ্যে <b>১ বার</b> উত্তোলন করা যাবে।
+                </div>
+                <div style="background: #f8fafc; padding: 8px 10px; border-radius: 6px; border-left: 3px solid #f59e0b;">
+                    ✅ চার্জ: ১০০ থেকে ৩০০ টাকায় ফ্ল্যাট <b>৫ টাকা</b>।
+                </div>
+                <div style="background: #f8fafc; padding: 8px 10px; border-radius: 6px; border-left: 3px solid #6366f1;">
+                    ✅ ৩০০ টাকার বেশি উত্তোলনে প্রতি বার <b>২%</b> চার্জ প্রযোজ্য।
+                </div>
+            </div>
+        </div>
+
+        <button onclick="toggleWithdrawRules(false)" style="width: 100%; margin-top: 16px; background: #f1f5f9; color: #475569; border: none; padding: 10px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer; transition: background 0.2s;">
+            ঠিক আছে
+        </button>
+    </div>
+</div>
 
 <style>
-    /* মেথড কার্ড সিলেক্টেড স্টাইল */
-    .w-method-card.active {
-        border-color: #ff0000 !important;
-        background: #fff5f5 !important;
-        transform: translateY(-4px);
-        box-shadow: 0 10px 20px rgba(255, 0, 0, 0.1) !important;
+    /* পপআপ মডাল স্টাইল */
+    .rules-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(4px);
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
     }
-    input:focus {
+
+    .rules-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .rules-modal-content {
+        background: #ffffff;
+        width: 100%;
+        max-width: 340px;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        transform: scale(0.9);
+        transition: transform 0.25s ease;
+    }
+
+    .rules-modal-overlay.active .rules-modal-content {
+        transform: scale(1);
+    }
+
+    /* মেথড কার্ড ডিজাইন */
+    .w-method-card {
+        background: #ffffff;
+        position: relative;
+        height: 70px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        border-bottom: 3px solid #cbd5e1;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .w-method-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+        transition: transform 0.2s ease;
+    }
+
+    .w-method-card:hover {
+        transform: translateY(-2px);
+        border-color: #cbd5e1;
+    }
+
+    /* সিলেক্টেড মেথড স্টাইল */
+    .w-method-card.active-method {
+        border-color: #e11d48 !important;
+        border-bottom: 3px solid #be123c !important;
+        background: #fff1f2 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(225, 29, 72, 0.15) !important;
+    }
+
+    .w-method-card.active-method img {
+        transform: scale(1.05);
+    }
+
+    /* ইনপুট ফিল্ড স্টাইল */
+    .form-input-field {
+        width: 100%;
+        padding: 13px 15px;
+        border-radius: 6px;
+        border: 1px solid #cbd5e1;
+        background: #f8fafc;
+        font-weight: 600;
+        font-size: 14px;
+        color: #0f172a;
         outline: none;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+    }
+
+    .form-input-field:focus {
+        border-color: #e11d48 !important;
+        background: #ffffff !important;
+        box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1) !important;
+    }
+
+    /* সাবমিট বাটন স্টাইল */
+    .submit-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #d31027 0%, #ea384d 50%, #ff512f 100%);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        box-shadow: 0 6px 18px rgba(211, 16, 39, 0.25);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .submit-btn:hover {
+        box-shadow: 0 8px 22px rgba(211, 16, 39, 0.35);
+        transform: translateY(-1px);
+    }
+
+    .submit-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 3px 10px rgba(211, 16, 39, 0.2);
     }
 </style>
 
 <script>
-    // মেথড সিলেক্ট করার ফাংশন (যাতে একটি সিলেক্ট করলে বাকিগুলো রিসেট হয়ে যায়)
+    // পপআপ খোলা/বন্ধ করার ফাংশন
+    function toggleWithdrawRules(show) {
+        const modal = document.getElementById('withdraw-rules-modal');
+        if (show) {
+            modal.classList.add('active');
+        } else {
+            modal.classList.remove('active');
+        }
+    }
+
+    // পেমেন্ট মেথড সিলেক্ট করার ফাংশন
     function selectWithdrawMethod(method) {
-        // সব কার্ড থেকে active-method ক্লাস রিমুভ করা
         document.querySelectorAll('.w-method-card').forEach(card => {
             card.classList.remove('active-method');
         });
-        
-        // বর্তমান ক্লিক করা কার্ডে ক্লাস অ্যাড করা
+
         const selectedCard = document.getElementById('w-' + method);
-        if(selectedCard) {
+        if (selectedCard) {
             selectedCard.classList.add('active-method');
         }
-        
-        // আপনার মেথড হ্যান্ডলার এখানে দিতে পারেন
+
         console.log("Selected Method: " + method);
     }
 </script>
 
-<style>
-    .w-method-card {
-        background: white;
-        padding: 15px 10px;
-        text-align: center;
-        border-radius: 18px;
-        border: 1.5px solid #f1f5f9;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #64748b; /* ডিফল্ট আইকন কালার */
-    }
-
-    .w-method-card span {
-        font-size: 11px;
-        font-weight: 700;
-        margin-top: 5px;
-    }
-
-    /* শুধুমাত্র সিলেক্ট করা মেথড কালার হবে */
-    .active-method {
-        border-color: #3b82f6 !important;
-        background: #eff6ff !important;
-        color: #3b82f6 !important; /* আইকন এবং টেক্সট কালার নীল হবে */
-        box-shadow: 0 8px 15px rgba(59, 130, 246, 0.15);
-        transform: translateY(-3px);
-    }
-</style>
 <div id="p-withdraw-history" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1600; overflow-y: auto; font-family: 'Poppins', sans-serif;">
     
     <!-- হেডার সেকশন: প্রিমিয়াম রেড-ইয়েলো গ্রেডিয়েন্ট -->
@@ -4650,6 +8031,8 @@ function togglePassword() {
         </div>
     </div>
 </div>
+
+      
 <!-- নোটিফিকেশন পেজ -->
 <div id="notification-page" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #f8fafc; z-index: 1000; font-family: 'Poppins', sans-serif;">
     
@@ -5884,6 +9267,8 @@ function closeSuccessPopup() {
 </div>
 
 
+
+
 <div id="p-wallet" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column;">
     
 <div style="background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%); padding: 25px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 6px 20px rgba(255, 0, 0, 0.15); border-radius: 0px;">
@@ -5900,6 +9285,9 @@ function closeSuccessPopup() {
     </div>
 
 </div>
+
+
+
 
 <div class="container px-3 mt-4" style="flex: 1;">
     <div style="margin: 3px; background: linear-gradient(135deg, #ff0000 0%, #ffcc00 100%); padding: 30px 25px; border-radius: 0px; color: white; box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15); position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2);">
@@ -6101,6 +9489,8 @@ function closeSuccessPopup() {
     }
 </style>
 
+
+
   <div id="p-income-sub" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fdfdfd; z-index: 1600; overflow-y: auto; font-family: 'Poppins', sans-serif;">
 <style>
     @keyframes fadeInUp {
@@ -6224,6 +9614,7 @@ function closeSuccessPopup() {
         background: #f8fafc;
     }
 </style>
+  
 
 <div id="p-post" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
     
@@ -7933,46 +11324,509 @@ initMicroJobs();
     </div>
 </div>
 
-<div id="bottom-nav" style="position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(90deg, #ff0000 0%, #ff9900 100%); display: flex; justify-content: space-around; align-items: center; padding: 0; z-index: 999; box-shadow: 0 -4px 20px rgba(255, 0, 0, 0.15); border-top: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(15px); height: 65px; font-family: 'Poppins', sans-serif; box-sizing: border-box;">
+<!-- ================= PREMIUM BOTTOM NAVIGATION ================= -->
 
-    <div onclick="openPage('p-home')" 
-         style="text-align: center; cursor: pointer; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.2s ease;"
-         onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'">
-        <div style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-            <i class="fas fa-home" style="font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.15);"></i>
+<div id="bottom-nav" class="premium-bottom-nav">
+
+    <!-- HOME -->
+    <div
+        class="bottom-nav-item active"
+        onclick="openPage('p-home')"
+    >
+
+        <div class="bottom-icon">
+
+            <i class="fas fa-home"></i>
+
         </div>
-        <span style="display: block; font-size: 9px; font-weight: 800; color: white; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.3px;">হোম</span>
+
+        <span>হোম</span>
+
     </div>
 
-    <div onclick="handleTeamClick()" 
-         style="text-align: center; cursor: pointer; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.2s ease;"
-         onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'">
-        <div style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-            <i class="fas fa-users" style="font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.15);"></i>
+
+    <!-- TEAM -->
+    <div
+        class="bottom-nav-item"
+        onclick="handleTeamClick()"
+    >
+
+        <div class="bottom-icon">
+
+            <i class="fas fa-users"></i>
+
         </div>
-        <span style="display: block; font-size: 9px; font-weight: 800; color: white; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.3px;">মাই টিম</span>
+
+        <span>মাই টিম</span>
+
     </div>
 
 
+    <!-- WALLET -->
+    <div
+        class="bottom-nav-item"
+        onclick="openPage('p-wallet')"
+    >
 
-    <div onclick="openPage('p-wallet')" 
-         style="text-align: center; cursor: pointer; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.2s ease;"
-         onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'">
-        <div style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-            <i class="fas fa-wallet" style="font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.15);"></i>
+        <div class="bottom-icon">
+
+            <i class="fas fa-wallet"></i>
+
         </div>
-        <span style="display: block; font-size: 9px; font-weight: 800; color: white; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.3px;">ওয়ালেট</span>
+
+        <span>ওয়ালেট</span>
+
     </div>
 
-<div onclick="openDirectSupport()" 
-     style="text-align: center; cursor: pointer; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.2s ease;"
-     onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'">
-    <div style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2);">
-        <i class="fas fa-headset" style="font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.15);"></i>
+
+    <!-- SUPPORT -->
+    <div
+        class="bottom-nav-item"
+        onclick="openDirectSupport()"
+    >
+
+        <div class="bottom-icon">
+
+            <i class="fas fa-headset"></i>
+
+        </div>
+
+        <span>সাপোর্ট</span>
+
     </div>
-    <span style="display: block; font-size: 9px; font-weight: 800; color: white; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.3px;">সাপোর্ট সেন্টার</span>
+
 </div>
 
+
+<style>
+
+/* =====================================================
+   PREMIUM BOTTOM NAV
+===================================================== */
+
+#bottom-nav.premium-bottom-nav{
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    width:100%;
+
+    height:70px;
+
+    padding:
+        6px 8px
+        calc(6px + env(safe-area-inset-bottom));
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+
+    z-index:9999;
+
+    font-family:
+        'Poppins',
+        'Hind Siliguri',
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% -50px,
+            rgba(255,255,255,.20),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #9d0000 0%,
+            #df0000 35%,
+            #f45100 70%,
+            #ff9f00 100%
+        );
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.30);
+
+    box-shadow:
+
+        0 -8px 30px
+        rgba(130,0,0,.22);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+}
+
+
+/* =====================================================
+   NAV ITEM
+===================================================== */
+
+.bottom-nav-item{
+
+    position:relative;
+
+    width:25%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:3px;
+
+    cursor:pointer;
+
+    color:
+        rgba(255,255,255,.78);
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    user-select:none;
+
+    transition:
+        transform .18s ease,
+        color .2s ease;
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.bottom-icon{
+
+    position:relative;
+
+    width:40px;
+
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    transition:
+
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.bottom-icon i{
+
+    font-size:15px;
+
+    color:
+        rgba(255,255,255,.85);
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.20)
+        );
+
+    transition:
+        transform .2s ease,
+        color .2s ease;
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.bottom-nav-item span{
+
+    font-size:8px;
+
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:.15px;
+
+    color:
+        rgba(255,255,255,.78);
+
+    white-space:nowrap;
+
+    transition:
+        color .2s ease;
+
+}
+
+
+/* =====================================================
+   ACTIVE ITEM
+===================================================== */
+
+.bottom-nav-item.active{
+
+    color:#fff;
+
+}
+
+
+.bottom-nav-item.active .bottom-icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.32),
+            rgba(255,255,255,.13)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.45);
+
+    box-shadow:
+
+        0 5px 15px
+        rgba(80,0,0,.18),
+
+        inset 0 1px 0
+        rgba(255,255,255,.30);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.bottom-nav-item.active .bottom-icon i{
+
+    color:#fff;
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.bottom-nav-item.active span{
+
+    color:#fff;
+
+}
+
+
+/* Active indicator */
+
+.bottom-nav-item.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:1px;
+
+    left:50%;
+
+    width:20px;
+
+    height:3px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:10px;
+
+    background:
+        #ffe600;
+
+    box-shadow:
+
+        0 0 8px
+        rgba(255,230,0,.75);
+
+}
+
+
+/* =====================================================
+   PRESS EFFECT
+===================================================== */
+
+.bottom-nav-item:active{
+
+    transform:
+        scale(.90);
+
+}
+
+
+.bottom-nav-item:active .bottom-icon{
+
+    background:
+        rgba(255,255,255,.25);
+
+}
+
+
+/* =====================================================
+   ICON INDIVIDUAL COLORS ON ACTIVE
+===================================================== */
+
+.bottom-nav-item:nth-child(1).active
+.bottom-icon i{
+
+    color:#fff;
+
+}
+
+
+.bottom-nav-item:nth-child(2).active
+.bottom-icon i{
+
+    color:#fff;
+
+}
+
+
+.bottom-nav-item:nth-child(3).active
+.bottom-icon i{
+
+    color:#ffe600;
+
+}
+
+
+.bottom-nav-item:nth-child(4).active
+.bottom-icon i{
+
+    color:#fff;
+
+}
+
+
+/* =====================================================
+   MOBILE SMALL SCREEN
+===================================================== */
+
+@media(max-width:360px){
+
+    #bottom-nav.premium-bottom-nav{
+
+        height:66px;
+
+        padding-left:4px;
+
+        padding-right:4px;
+
+    }
+
+
+    .bottom-icon{
+
+        width:36px;
+
+        height:32px;
+
+        border-radius:11px;
+
+    }
+
+
+    .bottom-icon i{
+
+        font-size:14px;
+
+    }
+
+
+    .bottom-nav-item span{
+
+        font-size:7px;
+
+    }
+
+}
+
+
+/* =====================================================
+   LARGE MOBILE
+===================================================== */
+
+@media(min-width:500px){
+
+    #bottom-nav.premium-bottom-nav{
+
+        max-width:600px;
+
+        left:50%;
+
+        right:auto;
+
+        transform:
+            translateX(-50%);
+
+        border-radius:
+            22px 22px 0 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .bottom-nav-item,
+    .bottom-icon,
+    .bottom-icon i{
+
+        transition:none !important;
+
+    }
+
+}
+
+</style>
+
+
+
+  
 <script>
     function openDirectSupport() {
         // সরাসরি নতুন ট্যাবে চ্যাট পেজ ওপেন হবে
@@ -8002,8 +11856,6 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 
 
-
-</div>
 
 
 
